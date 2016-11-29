@@ -8,8 +8,8 @@ class StatisticalDataSetPresenterTest
   end
 
   class PresentedStatisticalDataSet < StatisticalDataSetTestCase
-    test 'presents the format' do
-      assert_equal schema_item['format'], presented_item.format
+    test 'presents the schema_name' do
+      assert_equal schema_item.fetch('schema_name'), presented_item.schema_name
     end
 
     test 'presents a list of contents extracted from headings in the body' do

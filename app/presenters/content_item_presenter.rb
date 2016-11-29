@@ -1,7 +1,7 @@
 class ContentItemPresenter
   include Withdrawable
 
-  attr_reader :content_item, :title, :description, :format, :locale, :phase, :document_type
+  attr_reader :content_item, :title, :description, :schema_name, :locale, :phase, :document_type
 
   delegate :breadcrumbs, to: :@nav_helper
 
@@ -9,7 +9,7 @@ class ContentItemPresenter
     @content_item = content_item
     @title = content_item["title"]
     @description = content_item["description"]
-    @format = content_item["schema_name"]
+    @schema_name = content_item["schema_name"]
     @locale = content_item["locale"] || "en"
     @phase = content_item["phase"]
     @document_type = content_item["document_type"]

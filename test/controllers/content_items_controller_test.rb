@@ -38,12 +38,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "renders translated content items in their locale" do
     content_item = content_store_has_schema_example('case_study', 'translated')
-    translated_format_name = I18n.t("content_item.format.case_study", count: 1, locale: 'es')
+    translated_schema_name = I18n.t("content_item.format.case_study", count: 1, locale: 'es')
 
     get :show, params: { path: path_for(content_item) }
 
     assert_response :success
-    assert_select "title", %r(#{translated_format_name})
+    assert_select "title", %r(#{translated_schema_name})
   end
 
   test "gets item from content store even when url contains multi-byte UTF8 character" do

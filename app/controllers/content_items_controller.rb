@@ -28,7 +28,7 @@ private
   end
 
   def content_item_template
-    @content_item.format
+    @content_item.schema_name
   end
 
   def set_expiry

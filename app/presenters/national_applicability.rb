@@ -14,7 +14,7 @@ module NationalApplicability
           .map { |n| link_to(n['label'], n['alternative_url'], rel: :external) }
           .to_sentence
 
-        applies_to += " (see #{translated_format_name(nations_with_alt_urls.count)} for #{alternate_links})"
+        applies_to += " (see #{translated_schema_name(nations_with_alt_urls.count)} for #{alternate_links})"
       end
     end
 
@@ -23,8 +23,8 @@ module NationalApplicability
 
 private
 
-  def translated_format_name(count)
-    I18n.t("content_item.format.#{format}", count: count).downcase
+  def translated_schema_name(count)
+    I18n.t("content_item.format.#{schema_name}", count: count).downcase
   end
 
   def national_applicability
