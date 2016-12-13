@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'wraith', '~> 3.0'
+gem 'wraith', '~> 4.0'
 gem 'phantomjs', '~> 2.0'
