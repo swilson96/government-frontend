@@ -1,11 +1,4 @@
-class CaseStudyPresenter < ContentItemPresenter
-  include Metadata
-  include TitleAndContext
-
-  def body
-    content_item['details']['body']
-  end
-
+class CaseStudyPresenter < EditionPresenter
   def image
     content_item["details"]["image"]
   end

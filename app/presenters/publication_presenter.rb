@@ -1,10 +1,6 @@
-class PublicationPresenter < ContentItemPresenter
-  include Metadata
-  include NationalApplicability
-  include Political
-
+class PublicationPresenter < EditionPresenter
   def details
-    content_item["details"]["body"]
+    body
   end
 
   def documents

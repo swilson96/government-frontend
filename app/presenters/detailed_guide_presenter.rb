@@ -1,14 +1,6 @@
-class DetailedGuidePresenter < ContentItemPresenter
+class DetailedGuidePresenter < EditionPresenter
   include ExtractsHeadings
-  include Metadata
-  include NationalApplicability
-  include Political
   include ActionView::Helpers::UrlHelper
-  include TitleAndContext
-
-  def body
-    content_item["details"]["body"]
-  end
 
   def contents
     extract_headings_with_ids(body).map do |heading|

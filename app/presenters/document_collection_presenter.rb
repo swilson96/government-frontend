@@ -1,12 +1,5 @@
-class DocumentCollectionPresenter < ContentItemPresenter
-  include Metadata
-  include Political
-  include TitleAndContext
+class DocumentCollectionPresenter < EditionPresenter
   include ActionView::Helpers::UrlHelper
-
-  def body
-    content_item["details"]["body"]
-  end
 
   def contents
     groups.map do |group|

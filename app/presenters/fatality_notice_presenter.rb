@@ -1,7 +1,4 @@
-class FatalityNoticePresenter < ContentItemPresenter
-  include TitleAndContext
-  include Metadata
-
+class FatalityNoticePresenter < EditionPresenter
   def field_of_operation
     content_item_links = content_item["links"]["field_of_operation"]
     if content_item_links
@@ -28,9 +25,5 @@ class FatalityNoticePresenter < ContentItemPresenter
         t[:context] = "Operations in #{field_of_operation.try(:title)}"
       end
     end
-  end
-
-  def body
-    content_item['details']['body']
   end
 end
