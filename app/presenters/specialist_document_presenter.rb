@@ -12,15 +12,19 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   def metadata
     super.tap do |md|
       metadata = content_item["details"]["metadata"].reject{ |m| m == "document_type" }
-      metadata.each do |key,value|
-        date = Date.parse(value) rescue nil
-        metadata[key] = nice_date_format(date) if date
-      end
-
+      metadata = process_dates(metadata)
       metadata = metadata.transform_keys{ |md| md.to_s.humanize }
       md[:other].merge!(metadata)
       return md
     end
+  end
+
+  def process_dates(metadata)
+    metadata.each do |key,value|
+      date = Date.parse(value) rescue nil
+      metadata[key] = nice_date_format(date) if date
+    end
+    metadata
   end
 
   # this seems to be legacy now, as it comes back with headings
