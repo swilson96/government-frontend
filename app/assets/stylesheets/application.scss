@@ -42,3 +42,6 @@
 @import "views/world-location-news-article";
 @import "views/news-article";
 @import "views/corporate-information-page";
+
+// govuk overrides, seperated out to make them obvious in the alpha
+@import "govuk-component-overrides/metadata";
