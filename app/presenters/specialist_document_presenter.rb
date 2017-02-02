@@ -2,7 +2,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   include Metadata
   include Updatable
   include Linkable
-  include ExtractsHeadings
+  include ContentsList
   include ActionView::Helpers::UrlHelper
 
   def body
@@ -20,13 +20,6 @@ class SpecialistDocumentPresenter < ContentItemPresenter
       metadata = metadata.transform_keys{ |md| md.to_s.humanize }
       md[:other].merge!(metadata)
       return md
-    end
-  end
-
-  # this seems to be legacy now, as it comes back with headings
-  def contents
-    extract_headings_with_ids(body).map do |heading|
-      link_to(heading[:text], "##{heading[:id]}")
     end
   end
 
