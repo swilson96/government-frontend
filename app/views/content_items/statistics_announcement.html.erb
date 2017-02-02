@@ -10,7 +10,7 @@
 </div>
 
 <div class="primary-metadata">
-  <%= render 'govuk_component/metadata', @content_item.metadata %>
+  <%= render 'govuk_component_overrides/metadata', @content_item.metadata %>
 </div>
 <% if @content_item.cancelled? %>
   <div class="cancellation-notice">
@@ -24,7 +24,7 @@
 <div class="grid-row">
   <div class="column-two-thirds release-date-change-notice">
     <h2>The release date has been changed</h2>
-    <%= render 'govuk_component/metadata',
+    <%= render 'govuk_component_overrides/metadata',
         other: {
           "Previous date" => @content_item.previous_release_date,
           "Reason for change" => @content_item.release_date_change_reason,
