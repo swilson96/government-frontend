@@ -63,6 +63,23 @@ class TravelAdvicePresenter < ContentItemPresenter
     content_item["details"]["change_description"]
   end
 
+  def summary
+    '<span class="part-title">
+      Summary
+    </span>
+    <span class="part-description">
+      Current travel advice
+    </span>'.html_safe
+  end
+
+  def show_metadata?
+    true
+  end
+
+  def show_subscriptions?
+    true
+  end
+
   # these are also hardcoded in multipage frontend
   def breadcrumbs
     [

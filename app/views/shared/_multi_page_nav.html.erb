@@ -3,22 +3,19 @@
   <nav role="navigation" class="page-navigation" aria-label="parts to this guide">
 
     <ol class="grid-row">
+      <% if @content_item.summary.present? %>
       <li class="column-half">
         <% if section %>
         <a title="Summary" href="/foreign-travel-advice/turkey">
         <% end %>
 
-          <span class="part-title">
-            Summary
-          </span>
-          <span class="part-description">
-            Current travel advice
-          </span>
+        <%= @content_item.summary %>
 
         <% if section %>
         </a>
         <% end %>
       </li>
+      <% end %>
       <% @content_item.subsections.each do |subsection| %>
       <li class="column-half">
           <%= link_to_unless_current subsection["title"], subsection["link"] %>
@@ -27,11 +24,12 @@
     </ol>
 
   </nav>
+  <% if @content_item.show_subscriptions? %>
   <section class="subscriptions">
     <h1 class="visuallyhidden">Subscriptions</h1>
     Get updates
     <ul>
-
     </ul>
   </section>
+  <% end %>
 </aside>
