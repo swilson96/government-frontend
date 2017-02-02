@@ -5,13 +5,8 @@ module ContentsList
     contents_items.map do |item|
       {
         text: item[:text],
-        href: '##{item[:id]}',
-        level: 1,
-        data: {
-          track_category: 'contentsClicked',
-          track_action: 'leftColumnH2',
-          track_label: item[:id]
-        }
+        href: "##{item[:id]}",
+        level: item[:level]
       }
     end
   end
@@ -23,9 +18,10 @@ module ContentsList
 private
 
   def extract_headings_with_ids(html)
-    headings = Nokogiri::HTML(html).css('h2').map do |heading|
+    headings = Nokogiri::HTML(html).css('h2, h3').map do |heading|
       id = heading.attribute('id')
-      { text: strip_trailing_colons(heading.text), id: id.value } if id
+      level = heading.name.gsub('h', '').to_i - 1 || 1
+      { text: strip_trailing_colons(heading.text), id: id.value, level: level } if id
     end
     headings.compact
   end

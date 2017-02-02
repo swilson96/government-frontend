@@ -2,7 +2,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   include Metadata
   include Updatable
   include Linkable
-  include ExtractsHeadings
+  include ContentsList
   include ActionView::Helpers::UrlHelper
 
   def body
