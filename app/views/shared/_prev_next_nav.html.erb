@@ -1,0 +1,31 @@
+<% content_item = locals[:content_item] %>
+<% if content_item.parts.size > 1 then %>
+<% next_part = content_item.next_part 
+   prev_part = content_item.prev_part
+%>
+<footer>
+  <nav class="pagination previous-next-navigation" role="navigation" aria-label="Pagination">
+    <ul class="group">
+      <%- if prev_part -%>
+        <li class="previous">
+          <a href="<% prev_part["web_url"] %>" title="previous" rel="prev"> 
+            <span class="pagination-label">Previous</span>
+            <span class="pagination-part-title">
+              <%= prev_part["title"] %>
+            </span>
+          </a>
+        </li>
+      <%- end -%>
+      <%- if next_part -%>
+        <li class="next">
+            <a href="<% next_part["web_url"] %>" title="next" rel="next"> 
+            <span class="pagination-label">Next</span>
+            <span class="pagination-part-title">
+              <%= next_part["title"] %>
+            </span>
+        </li>
+      <%- end -%>
+    </ul>
+  </nav>
+</footer>
+<% end %>
