@@ -1,7 +1,8 @@
 class ContentItemPresenter
   include Withdrawable
-
-  attr_reader :content_item, :title, :description, :format, :locale, :phase, :document_type
+  # put nav_helper in as the breadcrumbs are hardcoded in travel advice presenter
+  # there is apull in to fix this, so we shoudlnt hit this next time
+  attr_reader :content_item, :title, :description, :format, :locale, :phase, :document_type, :nav_helper
 
   delegate :breadcrumbs, to: :@nav_helper
 

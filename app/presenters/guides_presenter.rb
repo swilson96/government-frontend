@@ -50,7 +50,9 @@ class GuidesPresenter < ContentItemPresenter
     @parts
   end
 
-
+  def related_links
+    nav_helper.related_items[:sections]
+  end
 
   def summary
   end
