@@ -21,6 +21,7 @@ private
     headings = Nokogiri::HTML(html).css('h2, h3').map do |heading|
       id = heading.attribute('id')
       level = heading.name.gsub('h', '').to_i - 1 || 1
+      # We should look into if we need to nest lists based on hierachy
       { text: strip_trailing_colons(heading.text), id: id.value, level: level } if id
     end
     headings.compact
