@@ -34,6 +34,11 @@ class TravelAdvicePresenter < ContentItemPresenter
     @params[:section]
   end
 
+  def section_title
+    false
+  end
+
+
   def retrieve_section(section)
     content_item["details"]["parts"].select { |sec| sec["slug"] == section }.first
   end
@@ -74,6 +79,14 @@ class TravelAdvicePresenter < ContentItemPresenter
 
   def show_metadata?
     true
+  end
+
+  def additional_metadata
+    {
+      "Still current at" => Date.today.strftime("%e %B %Y"),
+      "Updated" => content_item.last_reviewed_or_updated_at.strftime("%e %B %Y"),
+      "Latest update" => simple_format(content_item.latest_update) 
+    }
   end
 
   def show_subscriptions?

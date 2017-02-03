@@ -57,8 +57,33 @@ class GuidesPresenter < ContentItemPresenter
   def summary
   end
 
+  def parts
+    @parts
+  end
 
+  def current_part
+    if @params["section"]
+      @parts.select { |part| part[:slug] == @params[:section] }[0]
+    else
+      @parts[0]
+    end
+  end
 
+  def next_part
+    parts[current_part["order"]]
+  end
+
+  def prev_part
+    parts[current_part["order"] - 2]
+  end
+
+  def section_title
+    current_part["title"]
+  end
+
+  def additional_metadata
+    {}
+  end
 
 
   # JSON
