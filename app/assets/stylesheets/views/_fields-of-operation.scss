@@ -1,0 +1,30 @@
+.fields-of-operation {
+  @include description;
+  @include sidebar-with-body;
+
+  .direction-rtl & {
+    direction: rtl;
+    text-align: start;
+  }
+
+  .sidebar-with-body {
+    margin-bottom: 0 !important; /* hack */
+  }
+
+  .govuk-list-group {
+    list-style: none;
+    margin-bottom: 30px;
+  }
+
+  .govuk-list-group__item {
+    border-bottom: 1px solid #b2b2b2;
+    padding-bottom: 15px;
+    padding-top: 17.5px;
+  }
+
+  .govuk-list-group__link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 19px;
+  }
+}
