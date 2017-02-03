@@ -1,0 +1,85 @@
+<%= content_for :title, @content_item.title %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title', @content_item.title_and_context %>
+  </div>
+  <div class="column-one-third" style="padding-top: 45px;">
+    <%= render partial: 'govuk_component/organisation_logo', locals: {
+      organisation: {
+        name: "Ministry<br>of Defence",
+        url: "/government/organisations/ministry-of-defence",
+        brand: "ministry-of-defence",
+        crest: "mod"
+      }
+    } %>
+  </div>
+</div>
+
+<div class="grid-row sidebar-with-body">
+  <% if @content_item.contents.any? %>
+    <div class="column-third">
+      <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
+    </div>
+  <% end %>
+  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction %>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds offset-one-third">
+    <ul class="govuk-list-group">
+      <% for i in 0..9 do %>
+        <li class="govuk-list-group__item">
+          <h3>
+            Operations in Afghanistan
+          </h3>
+          <ul>
+            <li>
+              <a
+              class="govuk-list-group__link"
+              href="https://www.gov.uk/government/fatalities/flight-lieutenants-alan-scott-and-geraint-roberts-have-died"
+              >
+              Flight Lieutenants Alan Scott and Geraint Roberts have died
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="govuk-list-group__item">
+        <h3>
+          Corporal William Savage, Fusilier Sam Flint and Private Robert Hetherington, all serving with 2nd Battalion The Royal Regiment of Scotland, were killed when their vehicle was struck by an improvised explosive device whilst on a routine patrol in the Nahr-e Saraj district of Helmand province on Tuesday 30 April 2013.
+        </h3>
+        <ul>
+          <li>
+            <a
+              class="govuk-list-group__link"
+              href="https://www.gov.uk/government/fatalities/3-soldiers-of-2nd-battalion-the-royal-regiment-of-scotland-killed-in-afghanistan"
+            >
+            Corporal William Thomas Savage, aged 30 from Irvine.
+          </a>
+        </li>
+        <li>
+          <a
+            class="govuk-list-group__link"
+            href="https://www.gov.uk/government/fatalities/3-soldiers-of-2nd-battalion-the-royal-regiment-of-scotland-killed-in-afghanistan"
+          >
+          Fusilier Samuel Flint, aged 21 from Blackpool.
+        </a>
+      </li>
+      <li>
+        <a
+          class="govuk-list-group__link"
+          href="https://www.gov.uk/government/fatalities/3-soldiers-of-2nd-battalion-the-royal-regiment-of-scotland-killed-in-afghanistan"
+        >
+        Private Robert Murray Hetherington, from the United States of America.
+      </a>
+    </li>
+  </ul>
+  </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
