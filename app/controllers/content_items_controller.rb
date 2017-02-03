@@ -22,14 +22,16 @@ private
   def present(content_item)
     presenter_name = content_item['schema_name'].classify + 'Presenter'
     presenter_name = "GuidesPresenter" if guides_hack
+    presenter_name = "FieldsOfOperationPresenter" if fields_of_operation_hack
     presenter_class = Object.const_get(presenter_name)
     presenter_class.new(content_item, params)
-  rescue NameError
-    raise "No support for schema \"#{content_item['schema_name']}\""
+  # rescue NameError
+  #   raise "No support for schema \"#{content_item['schema_name']}\""
   end
 
   def content_item_template
     return "guides" if guides_hack
+    return "fields-of-operation" if fields_of_operation_hack
     @content_item.format
   end
 
@@ -65,5 +67,9 @@ private
 
   def guides_hack
     params["path"] == 'become-lorry-bus-driver'
+  end
+
+  def fields_of_operation_hack
+    params["path"] == 'government/fields-of-operation/afghanistan'
   end
 end
