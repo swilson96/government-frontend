@@ -9,7 +9,7 @@
         average_title_length: 'long' %>
   </div>
 </div>
-<%= render 'shared/metadata', content_item: @content_item %>
+<%= render partial: 'govuk_component_overrides/metadata', locals: @content_item.metadata %>
 
 <%= render 'shared/description', description: @content_item.description %>
 

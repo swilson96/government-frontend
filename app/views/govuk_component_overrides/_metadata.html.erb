@@ -11,32 +11,32 @@
   direction_class = " direction-#{direction}" if local_assigns.include?(:direction)
 %>
 <ol class="govuk-metadata<%= direction_class %>">
-  <li class="govuk-metadata__row">
-    <% if from.any? %>
-      <span class="govuk-metadata__key"><%= t("govuk_component.metadata.from", default: "From") %>:</span>
-      <span class="govuk-metadata__value"><%= from.to_sentence.html_safe %></span>
-    <% end %>
-  </li>
-  <li class="govuk-metadata__row">
-    <% if part_of.any? %>
-      <span class="govuk-metadata__key"><%= t("govuk_component.metadata.part_of", default: "Part of") %>:</span>
-      <span class="govuk-metadata__value"><%= part_of.to_sentence.html_safe %></span>
-    <% end %>
-  </li>
-  <li class="govuk-metadata__row">
-    <% if local_assigns.include?(:history) %>
-      <span class="govuk-metadata__key"><%= t("govuk_component.metadata.history", default: "History") %>:</span>
-      <span class="govuk-metadata__value"><%= history %></span>
-    <% end %>
-  </li>
-  <li class="govuk-metadata__row">
-    <% if local_assigns.include?(:first_published) && first_published %>
-      <span class="govuk-metadata__key"><%= t("govuk_component.metadata.first_published", default: "First published") %>:</span>
-      <span class="govuk-metadata__value"><%= first_published %></span>
-    <% end %>
-  </li>
-  <li class="govuk-metadata__row">
-    <% if local_assigns.include?(:last_updated) && last_updated %>
+  <% if from.any? %>
+    <li class="govuk-metadata__row">
+        <span class="govuk-metadata__key"><%= t("govuk_component.metadata.from", default: "From") %>:</span>
+        <span class="govuk-metadata__value"><%= from.to_sentence.html_safe %></span>
+    </li>
+  <% end %>
+  <% if part_of.any? %>
+    <li class="govuk-metadata__row">
+        <span class="govuk-metadata__key"><%= t("govuk_component.metadata.part_of", default: "Part of") %>:</span>
+        <span class="govuk-metadata__value"><%= part_of.to_sentence.html_safe %></span>
+    </li>
+  <% end %>
+  <% if local_assigns.include?(:history) %>
+    <li class="govuk-metadata__row">
+        <span class="govuk-metadata__key"><%= t("govuk_component.metadata.history", default: "History") %>:</span>
+        <span class="govuk-metadata__value"><%= history %></span>
+    </li>
+  <% end %>
+  <% if local_assigns.include?(:first_published) && first_published %>
+    <li class="govuk-metadata__row">
+        <span class="govuk-metadata__key"><%= t("govuk_component.metadata.first_published", default: "First published") %>:</span>
+        <span class="govuk-metadata__value"><%= first_published %></span>
+    </li>
+  <% end %>
+  <% if local_assigns.include?(:last_updated) && last_updated %>
+    <li class="govuk-metadata__row">
       <span class="govuk-metadata__key"><%= t("govuk_component.metadata.last_updated", default: "Last updated") %>:</span>
       <span class="govuk-metadata__value">
         <%= last_updated %><% if local_assigns.include?(:see_updates_link) %>,
@@ -45,20 +45,20 @@
           </a>
         <% end %>
       </span>
-    <% end %>
-  </li>
+    </li>
+  <% end %>
   <% if other.present? %>
     <% other.each do |title, definition| %>
       <%
         definition ||= []
         definition = Array(definition)
       %>
-      <li class="govuk-metadata__row">
-        <% if definition.any? %>
+      <% if definition.any? %>
+        <li class="govuk-metadata__row">
           <span class="govuk-metadata__key"><%= title %>:</span>
           <span class="govuk-metadata__value"><%= definition.to_sentence.html_safe %></span>
-        <% end %>
-      </li>
+        </li>
+      <% end %>
     <% end %>
   <% end %>
 </ol>
