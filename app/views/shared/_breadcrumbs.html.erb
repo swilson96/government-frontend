@@ -1,3 +1,4 @@
 <% if @content_item.breadcrumbs.any? %>
-  <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
+  <!-- this seems to be broken with the nav helpers 2.0 -->
+  <%# render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
 <% end %>
