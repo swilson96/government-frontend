@@ -20,7 +20,7 @@ browser: "phantomjs"
 # (required) The domain to take screenshots of.
 domains:
   production: "https://www.gov.uk"
-  prototype: "http://government-frontend.dev.gov.uk"
+  prototype: "https://government-frontend-prototype.herokuapp.com"
 
 # (required) The paths to capture.
 paths:
@@ -32,7 +32,7 @@ paths:
   government-collections-housing-benefit-for-local-authorities-bulletins: '/government/collections/housing-benefit-for-local-authorities-bulletins'
   become-lorry-bus-driver: '/become-lorry-bus-driver'
   foreign-travel-advice-egypt: '/foreign-travel-advice/egypt'
-  government-organisations-companies-house-about-about-our-services: '/government/organisations/companies-house/about/about-our-services'
+  government-organisations-department-of-health-about: '/government/organisations/department-of-health/about'
   government-world-location-news-the-new-consul-general-in-alexandria--2: '/government/world-location-news/the-new-consul-general-in-alexandria--2'
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
