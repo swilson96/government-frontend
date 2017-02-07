@@ -85,7 +85,7 @@ class TravelAdvicePresenter < ContentItemPresenter
     {
       "Still current at" => Date.today.strftime("%e %B %Y"),
       "Updated" => content_item.last_reviewed_or_updated_at.strftime("%e %B %Y"),
-      "Latest update" => simple_format(content_item.latest_update) 
+      "Latest update" => simple_format(content_item.latest_update)
     }
   end
 
@@ -144,4 +144,11 @@ class TravelAdvicePresenter < ContentItemPresenter
     ]
   end
 
+  def context
+    'Foreign travel advice'
+  end
+
+  def format
+    'multi-page'
+  end
 end

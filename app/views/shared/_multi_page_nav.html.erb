@@ -25,11 +25,26 @@
 
   </nav>
   <% if @content_item.show_subscriptions? %>
-  <section class="subscriptions">
-    <h1 class="visuallyhidden">Subscriptions</h1>
-    Get updates
-    <ul>
-    </ul>
-  </section>
+
+    <section class="subscriptions">
+      <h1 class="visuallyhidden">Subscriptions</h1>
+      Get updates
+      <ul>
+        <li>
+          <a
+            class="email-alerts"
+            title="Subscribe to email alerts"
+            href="/foreign-travel-advice/egypt/email-signup"
+          >email</a>
+        </li>
+        <li>
+          <a
+            class="feed"
+            title="Subscribe via RSS"
+            href="/foreign-travel-advice/egypt.atom"
+          >feed</a>
+        </li>
+      </ul>
+    </section>
   <% end %>
 </aside>

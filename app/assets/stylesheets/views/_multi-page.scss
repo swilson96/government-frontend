@@ -1,0 +1,149 @@
+.multi-page {
+  @include description;
+  @include sidebar-with-body;
+  @include history-notice;
+  @include withdrawal-notice;
+}
+
+.multi-page {
+
+  // FIXME: Remove when component has these default margins
+  .govuk-title {
+    margin-top: $gutter * 1.5;
+    margin-bottom: $gutter * 1.5;
+  }
+
+  // FIXME: Remove when component has these default margins
+  .govuk-metadata {
+    margin-bottom: $gutter * 1.5;
+  }
+
+  .print-link {
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    a {
+      background: image-url("icon-print.png") no-repeat 0% 50%;
+      padding: 0.5em 0 0.5em 28px;
+
+      @include device-pixel-ratio() {
+        background-image: image-url("icon-print-2x.png");
+        background-size: 16px 18px;
+      }
+    }
+  }
+
+  .page-navigation-container {
+    border-bottom: 1px solid $grey-2;
+    padding-bottom: $gutter-half;
+    margin-bottom: $gutter;
+  }
+
+  .page-navigation {
+    overflow: hidden;
+    margin-bottom: $gutter * 1.5;
+
+    li {
+      @include core-16;
+      list-style: none;
+      margin-bottom: 0.75em;
+
+      @include media(mobile) {
+        @include core-19;
+      }
+
+      a {
+        display: block;
+      }
+    }
+
+    .part-description {
+      display: block;
+    }
+  }
+
+  .subscriptions {
+    @include bold-19;
+
+    ul,
+    li {
+      display: inline;
+    }
+
+    a {
+      text-decoration: none;
+      padding-left: 28px;
+      height: 16px;
+      background-position: 0 50%;
+      background-repeat: no-repeat;
+      margin-left: $gutter-half;
+    }
+
+    .feed {
+      background-image: url(https://assets.publishing.service.gov.uk/multipage-frontend/travel-advice/feed-icon-black-636b5f8a830ba4285e72c63f70eb2be97086bbf6cc37af92b942607b4cca1f9c.png)
+    }
+
+    .email-alerts {
+      background-image: url(https://assets.publishing.service.gov.uk/multipage-frontend/travel-advice/mail-icon-56d6b86ca56fbf6996cc55581f1b7c33eed00ef3ae8ffa1aed1e5d92beddf2c6.png)
+    }
+  }
+
+  .part-content-title {
+    @include heading-27;
+    font-weight: 700;
+    margin-bottom: $gutter-half;
+  }
+
+  .related-items-container {
+    margin-top: $gutter * 1.5;
+    margin-bottom: $gutter * 1.5;
+  }
+
+  .help-notice {
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+    padding-left: 3.5em;
+    padding-top: 0.25em;
+    background: image-url("icon-important.png") no-repeat scroll 0 0.5em;
+
+    @include device-pixel-ratio() {
+      background-image: image-url("icon-important-2x.png");
+      background-size: 34px 34px;
+    }
+
+    p {
+      @include bold-19;
+    }
+  }
+
+  .map-image {
+    max-width: 100%;
+  }
+
+  .form-download {
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+
+    a {
+      display: block;
+      @include bold-19;
+      min-height: 2.5em;
+      padding-left: 2.5em;
+      background: image-url("icon-file-download.png") no-repeat scroll 0 0;
+
+      @include device-pixel-ratio() {
+        background-image: image-url("icon-file-download-2x.png");
+        background-size: 25px 25px;
+      }
+    }
+
+    a[rel="external"]:after {
+      content: none;
+    }
+  }
+
+  .govuk-related-items {
+    margin-top: 45px;
+  }
+
+}
