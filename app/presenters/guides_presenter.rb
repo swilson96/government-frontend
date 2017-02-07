@@ -85,6 +85,13 @@ class GuidesPresenter < ContentItemPresenter
     {}
   end
 
+  def format
+    'multi-page'
+  end
+
+  def show_subscriptions
+    true
+  end
 
   # JSON
   private

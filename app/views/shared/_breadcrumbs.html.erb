@@ -1,4 +1,30 @@
 <% if @content_item.breadcrumbs.any? %>
-  <!-- this seems to be broken with the nav helpers 2.0 -->
-  <%# render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
+  <% # render partial: 'govuk_component/breadcrumbs', locals: @content_item.breadcrumbs %>
+
+  <div class="govuk-breadcrumbs" data-module="track-click">
+    <ol>
+    <% @content_item.breadcrumbs.each_with_index do |crumb, index| %>
+      <li>
+        <% if crumb[:url] %>
+          <%= link_to(
+            crumb[:title],
+            crumb[:url],
+            data: {
+              track_category: 'breadcrumbClicked',
+              track_action: index + 1,
+              track_label: crumb[:url],
+              track_dimension: crumb[:title],
+              track_dimension_index: 29,
+            }
+          ) %>
+        <% else %>
+          <%= crumb[:title] %>
+        <% end %>
+      </li>
+    <% end %>
+    </ol>
+</div>
+
+
+
 <% end %>
