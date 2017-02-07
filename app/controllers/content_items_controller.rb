@@ -30,7 +30,7 @@ private
   end
 
   def content_item_template
-    return "guides" if guides_hack
+    return "multi-page" if guides_hack
     return "fields-of-operation" if fields_of_operation_hack
     @content_item.format
   end
