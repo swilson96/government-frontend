@@ -8,6 +8,8 @@ Rails.application.routes.draw do
           content_item_prepend: "foreign-travel-advice/", as: :travel_advice_country_show
     r.get 'foreign-travel-advice/:path' => 'content_items#show',
           content_item_prepend: "foreign-travel-advice/", as: :travel_advice_country_index
+    r.get 'become-lorry-bus-driver/:section' => 'content_items#show', defaults: { path: "become-lorry-bus-driver"}
+
     r.get '*path' => 'content_items#show', constraints: { path: %r[.*] }
   end
 end

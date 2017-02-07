@@ -1,30 +1,3 @@
 <% if @content_item.breadcrumbs.any? %>
-  <% # render partial: 'govuk_component/breadcrumbs', locals: @content_item.breadcrumbs %>
-
-  <div class="govuk-breadcrumbs" data-module="track-click">
-    <ol>
-    <% @content_item.breadcrumbs.each_with_index do |crumb, index| %>
-      <li>
-        <% if crumb[:url] %>
-          <%= link_to(
-            crumb[:title],
-            crumb[:url],
-            data: {
-              track_category: 'breadcrumbClicked',
-              track_action: index + 1,
-              track_label: crumb[:url],
-              track_dimension: crumb[:title],
-              track_dimension_index: 29,
-            }
-          ) %>
-        <% else %>
-          <%= crumb[:title] %>
-        <% end %>
-      </li>
-    <% end %>
-    </ol>
-</div>
-
-
-
+  <%= render partial: 'govuk_component/breadcrumbs', locals: @content_item.breadcrumbs %>
 <% end %>
