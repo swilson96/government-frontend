@@ -22,8 +22,20 @@
   <div id="wrapper" class="<%= wrapper_class %>">
     <main role="main" id="content" class="<%= @content_item.format.dasherize %>" lang="<%= I18n.locale %>">
       <%= render_phase_label @content_item, content_for(:phase_message) %>
-      <%# THIS SEEMS REALLY BROKEN CURRENTLY, SO DISABLE AND FIX FOR ALL APPS AT ONCE %>
+      <% # This is being odd so going to add a placeholder for now %>
       <%# render 'shared/breadcrumbs' %>
+      <%= render partial: 'govuk_component/breadcrumbs', locals: {
+        breadcrumbs: [
+          {
+            title: "Home",
+            url: "/"
+          },
+          {
+            title: "Placeholder",
+            url: "#"
+          }
+        ]
+      } %>
       <%= yield %>
     </main>
   </div>
