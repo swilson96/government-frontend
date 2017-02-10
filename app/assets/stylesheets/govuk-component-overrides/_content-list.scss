@@ -4,8 +4,8 @@
   }
   &__link {
     display: block;
-    padding-top: 7.5px;
-    padding-bottom: 7.5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-decoration: none;
     line-height: 1.25;
   }
@@ -15,11 +15,11 @@
   }
 
   &__item--level-2 &__link {
-    padding-left: 1.5em;
+    padding-left: 1em;
     &:before {
-      content: "\2014";
+      content: "\2013";
       float: left;
-      margin-left: -1.5em;
+      margin-left: -1em;
     }
   }
 }
