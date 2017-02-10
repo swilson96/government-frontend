@@ -28,6 +28,12 @@
 
   .group-document-list-item-title {
     @include bold-19;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .group-document-list-item-attributes li {
