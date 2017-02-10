@@ -2,6 +2,22 @@ class PublicationPresenter < ContentItemPresenter
   include Metadata
   include NationalApplicability
   include Political
+  include ContentsList
+
+  def contents_items
+    [
+      {
+        text: 'Documents',
+        id: "documents-title",
+        level: 1
+      },
+      {
+        text: 'Details',
+        id: "details-title",
+        level: 1
+      }
+    ]
+  end
 
   def details
     content_item["details"]["body"]

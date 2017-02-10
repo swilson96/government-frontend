@@ -4,9 +4,40 @@ class ConsultationPresenter < ContentItemPresenter
   include Political
   include Shareable
   include TitleAndContext
+  include ContentsList
 
   def body
     content_item["details"]["body"]
+  end
+
+  def contents_items
+    [
+      {
+        text: 'Download the full outcome',
+        id: "final-outcome-documents-title",
+        level: 1
+      },
+      {
+        text: 'Detail of outcome',
+        id: "final-outcome-detail-title",
+        level: 1
+      },
+      {
+        text: 'Original consultation',
+        id: "original-consultation-title",
+        level: 1
+      },
+      {
+        text: 'Documents',
+        id: "documents-title",
+        level: 1
+      },
+      {
+        text: 'Consultation description',
+        id: "description-title",
+        level: 1
+      }
+    ]
   end
 
   def opening_date_time
