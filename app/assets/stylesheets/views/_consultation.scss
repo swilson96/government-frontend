@@ -31,28 +31,14 @@
       padding: $gutter;
     }
 
-    h2 {
-      @include bold-27;
-      margin-bottom: $gutter-one-third;
-    }
-
     .consultation-dates {
-      @include media(tablet) {
-        padding-right: $gutter;
-      }
     }
 
     .consultation-summary {
       margin-top: $gutter-half;
-
-      @include media(tablet) {
-        margin-top: 0;
-        margin-left: -$gutter-one-third;
-        padding-right: 0;
-        border-left: 1px solid $white;
-      }
     }
 
+    .consultation-summary .description,
     .consultation-date {
       @include core-24;
     }
