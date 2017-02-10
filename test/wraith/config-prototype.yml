@@ -24,16 +24,16 @@ domains:
 
 # (required) The paths to capture.
 paths:
-  government-fields-of-operation-afghanistan: '/government/fields-of-operation/afghanistan'
-  government-consultations-consultation-on-the-compliance-and-review-methodology-september-2016: '/government/consultations/consultation-on-the-compliance-and-review-methodology-september-2016'
-  government-publications-bis-annual-report-and-accounts-2015-to-2016: '/government/publications/bis-annual-report-and-accounts-2015-to-2016'
-  government-publications-higher-education-success-as-a-knowledge-economy-white-paper: '/government/publications/higher-education-success-as-a-knowledge-economy-white-paper'
+  fields-of-operation: '/government/fields-of-operation/afghanistan'
+  consultation: '/government/consultations/consultation-on-the-compliance-and-review-methodology-september-2016'
+  publication: '/government/publications/bis-annual-report-and-accounts-2015-to-2016'
+  publication-2: '/government/publications/higher-education-success-as-a-knowledge-economy-white-paper'
   cma-cases-energy-market-investigation: '/cma-cases/energy-market-investigation'
-  government-collections-housing-benefit-for-local-authorities-bulletins: '/government/collections/housing-benefit-for-local-authorities-bulletins'
-  become-lorry-bus-driver: '/become-lorry-bus-driver'
-  foreign-travel-advice-egypt: '/foreign-travel-advice/egypt'
-  government-organisations-department-of-health-about: '/government/organisations/department-of-health/about'
-  government-world-location-news-the-new-consul-general-in-alexandria--2: '/government/world-location-news/the-new-consul-general-in-alexandria--2'
+  document-collection-lists: '/government/collections/housing-benefit-for-local-authorities-bulletins'
+  multi-page-guide: '/become-lorry-bus-driver'
+  multi-page-travel-advice: '/foreign-travel-advice/egypt'
+  organisation-about: '/government/organisations/department-of-health/about'
+  news-article: '/government/world-location-news/the-new-consul-general-in-alexandria--2'
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
