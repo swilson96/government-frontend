@@ -2,11 +2,12 @@ module ContentsList
   include ActionView::Helpers::UrlHelper
 
   def contents
+    maxLevel = contents_items.max_by{|k, v| v}[:level]
     contents_items.map do |item|
       {
         text: item[:text],
         href: "##{item[:id]}",
-        level: item[:level]
+        level: maxLevel > 1 ? 1 : item[:level]
       }
     end
   end
