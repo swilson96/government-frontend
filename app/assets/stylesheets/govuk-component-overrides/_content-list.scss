@@ -1,25 +1,20 @@
-.govuk-contents-list {
-  &__item {
-    list-style: none;
-  }
-  &__link {
-    display: block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-decoration: none;
-    line-height: 1.25;
+.govuk-contents-list__item {
+  list-style: none;
+}
+.govuk-contents-list__link {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 1em;
+  text-decoration: none;
+  line-height: 1.25;
+}
+  .govuk-contents-list__link:before {
+    content: "\2013";
+    float: left;
+    margin-left: -1em;
   }
 
-  &__item--level-1 {
-    font-weight: bold;
-  }
-
-  &__item--level-2 &__link {
-    padding-left: 1em;
-    &:before {
-      content: "\2013";
-      float: left;
-      margin-left: -1em;
-    }
-  }
+.govuk-contents-list__item--level-2 {
+  margin-left: 1em;
 }
