@@ -29,11 +29,11 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   end
 
   # this seems to be legacy now, as it comes back with headings
-  def contents
-    extract_headings_with_ids(body).map do |heading|
-      link_to(heading[:text], "##{heading[:id]}")
-    end
-  end
+  # def contents
+  #   extract_headings_with_ids(body).map do |heading|
+  #     link_to(heading[:text], "##{heading[:id]}")
+  #   end
+  # end
 
   def change_history
     content_item["details"]["change_history"] || []

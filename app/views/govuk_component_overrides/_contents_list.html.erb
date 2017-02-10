@@ -1,8 +1,6 @@
 <% if local_assigns[:items] && !items.blank? %>
   <ol class="govuk-contents-list">
     <% items.each do |item| %>
-    <%# LINKS ON CMA CASES ARE TEXT NOT THE OBJECTS EXPECTED HERE, FOR THE MOMENT, JUST DONT BREAK %>
-    <% next if item.class == ActiveSupport::SafeBuffer %>
       <li
         class="
           govuk-contents-list__item
