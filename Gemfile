@@ -5,16 +5,16 @@ ruby File.read(".ruby-version").strip
 gem 'airbrake', '~> 5.5'
 gem 'airbrake-ruby', '1.5'
 
+# gem 'derailed'
+
 gem 'govuk_frontend_toolkit', '5.1.0'
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
 gem 'rails', '~> 5.0'
 gem 'sass-rails', '~> 5.0.4'
-if ENV['SLIMMER_DEV']
-  gem 'slimmer', path: '../slimmer'
-else
-  gem 'slimmer', '9.6.0'
-end
+
+gem 'slimmer', github: 'alphagov/slimmer', branch: 'memory-test'
+
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
 gem 'rails-i18n', '>= 4.0.4'
