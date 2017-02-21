@@ -12,7 +12,7 @@ require 'mocha/mini_test'
 
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
-  include Slimmer::TestHelpers::SharedTemplates
+  include Slimmer::TestHelpers::GovukComponents
 
   def setup
     stub_shared_component_locales
@@ -30,7 +30,7 @@ end
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
-  include Slimmer::TestHelpers::SharedTemplates
+  include Slimmer::TestHelpers::GovukComponents
 
   def setup
     stub_shared_component_locales
