@@ -1,6 +1,4 @@
 fr:
-  language_names:
-    fr: Français
   content_item:
     format:
       announcement:
@@ -69,9 +67,15 @@ fr:
       map:
         one: Carte
         other: Cartes
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistiques - statistiques nationales
         other: Statistiques - statistiques nationales
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Actualités
         other: Actualités
@@ -79,6 +83,15 @@ fr:
         one: Actualités
         other: Actualités
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistiques
+        other: Statistiques
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -120,10 +133,13 @@ fr:
       statistical_data_set:
         one: Ensemble de données statistiques
         other: Ensembles de données statistiques
-      official_statistics:
-        one: Statistiques
-        other: Statistiques
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -138,24 +154,30 @@ fr:
       written_statement:
         one: Communiqué
         other: Communiqués
+    contents:
     metadata:
       published: publié
       updated: mise à jour
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Document
       other: Documents
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Informations générales
-    publication_scheme_html: En savoir plus sur les types d'informations régulièrement
-      publiés dans notre %{link}.
     personal_information_charter_html: Notre %{link} explique comment nous traitons
       vos renseignements personnels.
+    publication_scheme_html: En savoir plus sur les types d'informations régulièrement
+      publiés dans notre %{link}.
+    social_media_use_html: Lire notre politique d' %{link}.
     welsh_language_scheme_html: En savoir plus sur notre engagement à l'édition en
       %{link}.
-    social_media_use_html: Lire notre politique d' %{link}.
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    fr: Français
+  time:
+    formats:
+      short_ordinal:

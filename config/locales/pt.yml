@@ -1,6 +1,4 @@
 pt:
-  language_names:
-    pt: Português
   content_item:
     format:
       announcement:
@@ -69,9 +67,15 @@ pt:
       map:
         one: Mapa
         other: Mapas
+      national:
+        one:
+        other:
       national_statistics:
         one: Estatística - estatística nacional
         other: Estatísticas - estatísticas nacionais
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Notícia - Artigo
         other: Notícias - Artigos
@@ -79,6 +83,15 @@ pt:
         one: Notícia
         other: Notícias
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Estatística
+        other: Estatísticas
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -120,10 +133,13 @@ pt:
       statistical_data_set:
         one: Conjunto de dados estastísticos
         other: Conjuntos de dados estatísticos
-      official_statistics:
-        one: Estatística
-        other: Estatísticas
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -138,24 +154,30 @@ pt:
       written_statement:
         one: Declaração escrita ao Parlamento
         other: Declarações escritas ao Parlamento
+    contents:
     metadata:
       published: publicado
       updated: Atualizado
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Documento
       other: Documentos
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Informações administrativas
-    publication_scheme_html: Leia sobre os tipos de informações que publicamos rotineiramente
-      em nosso %{link}.
     personal_information_charter_html: Nosso %{link} explica como nós tratamos suas
       informações pessoais
+    publication_scheme_html: Leia sobre os tipos de informações que publicamos rotineiramente
+      em nosso %{link}.
+    social_media_use_html: Leia nossa política sobre %{link}
     welsh_language_scheme_html: Saiba mais sobre nosso comprometimento em publicar
       em %{link}
-    social_media_use_html: Leia nossa política sobre %{link}
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    pt: Português
+  time:
+    formats:
+      short_ordinal:

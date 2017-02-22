@@ -1,6 +1,4 @@
 pl:
-  language_names:
-    pl: Polski
   content_item:
     format:
       announcement:
@@ -113,11 +111,21 @@ pl:
         few:
         many:
         other: Mapy
+      national:
+        one:
+        few:
+        many:
+        other:
       national_statistics:
         one: Statystyki - statystyki narodowe
         few:
         many:
         other: Statystyki - statystyki narodowe
+      national_statistics_announcement:
+        one:
+        few:
+        many:
+        other:
       news_article:
         one: Artykuł prasowy
         few:
@@ -129,6 +137,21 @@ pl:
         many:
         other: Aktualności
       notice:
+        one:
+        few:
+        many:
+        other:
+      official:
+        one:
+        few:
+        many:
+        other:
+      official_statistics:
+        one: Statystyki
+        few:
+        many:
+        other: Statystyki
+      official_statistics_announcement:
         one:
         few:
         many:
@@ -198,12 +221,17 @@ pl:
         few:
         many:
         other: Zestawy danych statystycznych
-      official_statistics:
-        one: Statystyki
+      statistics_announcement:
+        one:
         few:
         many:
-        other: Statystyki
+        other:
       statutory_guidance:
+        one:
+        few:
+        many:
+        other:
+      take_part:
         one:
         few:
         many:
@@ -228,26 +256,32 @@ pl:
         few:
         many:
         other: Pisemne oświadczenia przed parlamentem
+    contents:
     metadata:
       published: opublikowano
       updated: Zaktualizowany
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Dokument
       few:
       many:
       other: Dokumenty
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Informacje korporacyjne
-    publication_scheme_html: Przeczytaj, jakiego rodzaju wiadomości publikujemy zwykle
-      w naszym %{link}
     personal_information_charter_html: Nasz %{link} pokazuje, w jaki sposób traktujemy
       Państwa informacje osobiste
+    publication_scheme_html: Przeczytaj, jakiego rodzaju wiadomości publikujemy zwykle
+      w naszym %{link}
+    social_media_use_html: Przeczytaj naszą politykę dotyczącą %{link}
     welsh_language_scheme_html: Poznaj nasze zobowiązania związane z publikowaniem
       w %{link}
-    social_media_use_html: Przeczytaj naszą politykę dotyczącą %{link}
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    pl: Polski
+  time:
+    formats:
+      short_ordinal:

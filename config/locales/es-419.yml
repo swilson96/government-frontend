@@ -1,6 +1,4 @@
 es-419:
-  language_names:
-    es-419: Español
   content_item:
     format:
       announcement:
@@ -69,9 +67,15 @@ es-419:
       map:
         one: Mapa
         other: Mapas
+      national:
+        one:
+        other:
       national_statistics:
         one: Estadísticas - cifras nacionales
         other: Estadísticas - cifras nacionales
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artículo
         other: Artículos
@@ -79,6 +83,15 @@ es-419:
         one: Noticia
         other: Noticias
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Estadísticas
+        other: Estadísticas
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -120,10 +133,13 @@ es-419:
       statistical_data_set:
         one: Conjunto de datos estadísticos
         other: Conjuntos de datos estadísticos
-      official_statistics:
-        one: Estadísticas
-        other: Estadísticas
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -138,24 +154,30 @@ es-419:
       written_statement:
         one: Declaración escrita al Parlamento
         other: Declaraciones escritas al Parlamento
+    contents:
     metadata:
       published: publicado
       updated: actualizado
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Documento
       other: Documentos
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Información institucional
-    publication_scheme_html: Lea sobre los tipos de información que usualmente publicamos
-      en nuestro %{link}
     personal_information_charter_html: Nuestro %{link} explica cómo manejamos su información
       personal
+    publication_scheme_html: Lea sobre los tipos de información que usualmente publicamos
+      en nuestro %{link}
+    social_media_use_html: Lea nuestra política en %{link}
     welsh_language_scheme_html: Descubra sobre nuestro compromiso de publicar en el
       %{link}
-    social_media_use_html: Lea nuestra política en %{link}
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    es-419: Español
+  time:
+    formats:
+      short_ordinal:

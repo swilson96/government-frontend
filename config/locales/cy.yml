@@ -1,6 +1,4 @@
 cy:
-  language_names:
-    cy: Cymraeg
   content_item:
     format:
       announcement:
@@ -157,6 +155,13 @@ cy:
         few:
         many:
         other: Mapiau
+      national:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       national_statistics:
         zero:
         one: Ystadegau - ystadegau gwladol
@@ -164,6 +169,13 @@ cy:
         few:
         many:
         other: Ystadegau - ystadegau gwladol
+      national_statistics_announcement:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       news_article:
         zero:
         one: Erthygl newyddion
@@ -179,6 +191,27 @@ cy:
         many:
         other: Straeon newyddion
       notice:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
+      official:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
+      official_statistics:
+        zero:
+        one: Ystadegau
+        two:
+        few:
+        many:
+        other: Ystadegau
+      official_statistics_announcement:
         zero:
         one:
         two:
@@ -276,14 +309,21 @@ cy:
         few:
         many:
         other: Setiau data ystadegol
-      official_statistics:
+      statistics_announcement:
         zero:
-        one: Ystadegau
+        one:
         two:
         few:
         many:
-        other: Ystadegau
+        other:
       statutory_guidance:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
+      take_part:
         zero:
         one:
         two:
@@ -318,14 +358,10 @@ cy:
         few:
         many:
         other: Datganiadau ysgrifenedig i'r Senedd
+    contents: Cynnwys
     metadata:
       published: cyhoeddwyd
       updated: diweddarwyd
-    contents: Cynnwys
-  detailed_guide:
-    related_mainstream_content: Gormod o fanylion?<br/>Edrychwch ar y canllawiau cyflym
-      hyn
-    related_guides: Arweiniad manwl perthnasol
   publication:
     documents:
       zero:
@@ -334,12 +370,22 @@ cy:
       few:
       many:
       other: Dogfennau
+    details:
   corporate_information_page:
+    about_our_services_html: Canfod %{link}
     corporate_information: Gwybodaeth gorfforaethol
-    publication_scheme_html: Darllenwch am y mathau o wybodaeth rydym yn eu cyhoeddi'n
-      rheolaidd yn ein %{link}.
     personal_information_charter_html: Mae ein %{link} yn egluro sut rydym yn trin
       eich gwybodaeth bersonol.
-    welsh_language_scheme_html: Dysgwch am ein hymrwymiad i %{link}.
+    publication_scheme_html: Darllenwch am y mathau o wybodaeth rydym yn eu cyhoeddi'n
+      rheolaidd yn ein %{link}.
     social_media_use_html: Darllenwch ein polisi ar %{link}
-    about_our_services_html: Canfod %{link}
+    welsh_language_scheme_html: Dysgwch am ein hymrwymiad i %{link}.
+  detailed_guide:
+    related_guides: Arweiniad manwl perthnasol
+    related_mainstream_content: Gormod o fanylion?<br/>Edrychwch ar y canllawiau cyflym
+      hyn
+  language_names:
+    cy: Cymraeg
+  time:
+    formats:
+      short_ordinal:

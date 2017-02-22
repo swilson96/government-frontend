@@ -1,6 +1,4 @@
 lt:
-  language_names:
-    lt: Lietuvių
   content_item:
     format:
       announcement:
@@ -88,13 +86,21 @@ lt:
         few:
         other:
       map:
-        one: "Žemėlapis"
+        one: Žemėlapis
         few:
-        other: "Žemėlapiai"
+        other: Žemėlapiai
+      national:
+        one:
+        few:
+        other:
       national_statistics:
         one: 'Statistika - nacionalinė statistika '
         few:
         other: 'Statistika - nacionalinė statistika '
+      national_statistics_announcement:
+        one:
+        few:
+        other:
       news_article:
         one: Straipsnis
         few:
@@ -107,14 +113,26 @@ lt:
         one:
         few:
         other:
+      official:
+        one:
+        few:
+        other:
+      official_statistics:
+        one: Statistika
+        few:
+        other: Statistika
+      official_statistics_announcement:
+        one:
+        few:
+        other:
       open_consultation:
         one: Atvira konsultacija
         few:
         other: 'Atviros konsultacijos '
       oral_statement:
-        one: "Žodinis kreipimasis į parlamentą"
+        one: Žodinis kreipimasis į parlamentą
         few:
-        other: "Žodiniai kreipimaisi į parlamentą"
+        other: Žodiniai kreipimaisi į parlamentą
       policy:
         one: Strategija
         few:
@@ -159,11 +177,15 @@ lt:
         one: Statistiniai duomenys
         few:
         other: Statistiniai duomenys
-      official_statistics:
-        one: Statistika
+      statistics_announcement:
+        one:
         few:
-        other: Statistika
+        other:
       statutory_guidance:
+        one:
+        few:
+        other:
+      take_part:
         one:
         few:
         other:
@@ -183,24 +205,30 @@ lt:
         one: Rašytinis kreipimasis į parlamentą
         few:
         other: Rašytiniai kreipimaisi į parlamentą
+    contents:
     metadata:
       published: publikuota
       updated: atnaujinta
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Dokumentas
       few:
       other: Dokumentai
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Korporatyvinė informacija
-    publication_scheme_html: Sužinokite, kokią informaciją mes pastoviai pateikiame
-      puslapyje %{link}.
     personal_information_charter_html: Čia %{link} rasite paaiškinimą, kaip tvarkoma
       Jūsų asmeninė informacija
-    welsh_language_scheme_html: Sužinokite apie mūsų įsipareigojimą skelbti %{link}.
+    publication_scheme_html: Sužinokite, kokią informaciją mes pastoviai pateikiame
+      puslapyje %{link}.
     social_media_use_html: Perskaitykite mūsų strategiją %{link}.
-    about_our_services_html:
+    welsh_language_scheme_html: Sužinokite apie mūsų įsipareigojimą skelbti %{link}.
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    lt: Lietuvių
+  time:
+    formats:
+      short_ordinal:

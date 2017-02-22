@@ -1,6 +1,4 @@
 et:
-  language_names:
-    et: Eesti
   content_item:
     format:
       announcement:
@@ -69,9 +67,15 @@ et:
       map:
         one: Kaart
         other: Kaardid
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistika - rahvuslikud statistikaandmed
         other: Statistika - rahvuslikud statistikaandmed
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artikkel
         other: Artiklid
@@ -81,6 +85,15 @@ et:
       notice:
         one: Teade
         other: Teated
+      official:
+        one:
+        other:
+      official_statistics:
+        one: 'Statistika '
+        other: Statistika
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
         one: Avatud konsultatsioon
         other: Avatud konsultatsioonid
@@ -120,12 +133,15 @@ et:
       statistical_data_set:
         one: Statistiline andmekogu
         other: Statistilised andmekogud
-      official_statistics:
-        one: 'Statistika '
-        other: Statistika
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one: Seadusejärgne juhis
         other: Seadusejärgne juhis
+      take_part:
+        one:
+        other:
       transcript:
         one: Protokoll
         other: Protokollid
@@ -138,24 +154,30 @@ et:
       written_statement:
         one: Kirjalik avaldus parlamendile
         other: Kirjalikud avaldused parlamendile
+    contents: Sisukord
     metadata:
       published: avaldatud
       updated: Täiendatud
-    contents: Sisukord
-  detailed_guide:
-    related_mainstream_content: 'Liiga detailne?<br/>Vt. neid kokkuvõtlikke juhendeid? '
-    related_guides: Seotud detailne juhend
   publication:
     documents:
       one: Dokument
       other: Dokumendid
+    details:
   corporate_information_page:
+    about_our_services_html: 'Uuri lisaks: %{link}'
     corporate_information: Korporatiivne info
-    publication_scheme_html: 'Lugege lisaks infoliikide kohta, mida me regulaarselt
-      avalikustame: %{link}'
     personal_information_charter_html: 'Meie %{link} selgitab kuidas me kohtleme Teie
       eraelulist teavet. '
+    publication_scheme_html: 'Lugege lisaks infoliikide kohta, mida me regulaarselt
+      avalikustame: %{link}'
+    social_media_use_html: 'Lugege meie poliitika kohta: %{link}'
     welsh_language_scheme_html: 'Lugege lisaks meie pühandumusest avaldamise osas:
       %{link}'
-    social_media_use_html: 'Lugege meie poliitika kohta: %{link}'
-    about_our_services_html: 'Uuri lisaks: %{link}'
+  detailed_guide:
+    related_guides: Seotud detailne juhend
+    related_mainstream_content: 'Liiga detailne?<br/>Vt. neid kokkuvõtlikke juhendeid? '
+  language_names:
+    et: Eesti
+  time:
+    formats:
+      short_ordinal:

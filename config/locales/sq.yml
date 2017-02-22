@@ -1,6 +1,4 @@
 sq:
-  language_names:
-    sq: Shqip
   content_item:
     format:
       announcement:
@@ -69,9 +67,15 @@ sq:
       map:
         one: Harte
         other: Harta
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistika - statistika kombetare
         other: Statistika - statistika kombetare
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artikull lajm
         other: Artikuj lajme
@@ -79,6 +83,15 @@ sq:
         one: Ngjarje
         other: Ngjarje
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistika
+        other: Statistika
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -120,10 +133,13 @@ sq:
       statistical_data_set:
         one: Grup te dhenash statistikore
         other: Grupe te dhenash stasistikore
-      official_statistics:
-        one: Statistika
-        other: Statistika
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -138,23 +154,29 @@ sq:
       written_statement:
         one: Deklarate me shkrim per Parlamentin
         other: Deklarata me shkrim per Parlamentin
+    contents:
     metadata:
       published: publikuar
       updated: rifreskuar
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Dokument
       other: Dokumente
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Informacion korporate
-    publication_scheme_html: Lexo mbi llojet e informacionit qe ne publikojme rregullisht
-      ne %{link}.
     personal_information_charter_html: "%{link} shpjegon si trajtohet informacioni
       juaj personal"
-    welsh_language_scheme_html: Meso mbi angazhimin tone ndaj publikimit ne %{link}
+    publication_scheme_html: Lexo mbi llojet e informacionit qe ne publikojme rregullisht
+      ne %{link}.
     social_media_use_html: Lexo politikat tona ne %{link}
-    about_our_services_html:
+    welsh_language_scheme_html: Meso mbi angazhimin tone ndaj publikimit ne %{link}
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    sq: Shqip
+  time:
+    formats:
+      short_ordinal:

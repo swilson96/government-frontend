@@ -1,12 +1,10 @@
 ro:
-  language_names:
-    ro: Română
   content_item:
     format:
       announcement:
-        one: "Știre"
+        one: Știre
         few:
-        other: "Știri"
+        other: Știri
       authored_article:
         one: 'Articol '
         few:
@@ -91,19 +89,39 @@ ro:
         one: Hartă
         few:
         other: Hărţi
+      national:
+        one:
+        few:
+        other:
       national_statistics:
         one: Statistici - statistici naționale
         few:
         other: Statistici - statistici naționale
+      national_statistics_announcement:
+        one:
+        few:
+        other:
       news_article:
-        one: "Știre"
+        one: Știre
         few:
-        other: "Știri"
+        other: Știri
       news_story:
-        one: "Știre"
+        one: Știre
         few:
-        other: "Știri"
+        other: Știri
       notice:
+        one:
+        few:
+        other:
+      official:
+        one:
+        few:
+        other:
+      official_statistics:
+        one: Statistici
+        few:
+        other: Statistici
+      official_statistics_announcement:
         one:
         few:
         other:
@@ -124,9 +142,9 @@ ro:
         few:
         other:
       press_release:
-        one: "Știre"
+        one: Știre
         few:
-        other: "Știri"
+        other: Știri
       promotional:
         one: Material promoțional
         few:
@@ -159,11 +177,15 @@ ro:
         one: Date statistice
         few:
         other: Date statistice
-      official_statistics:
-        one: Statistici
+      statistics_announcement:
+        one:
         few:
-        other: Statistici
+        other:
       statutory_guidance:
+        one:
+        few:
+        other:
+      take_part:
         one:
         few:
         other:
@@ -176,32 +198,38 @@ ro:
         few:
         other:
       world_location_news_article:
-        one: "Știre"
+        one: Știre
         few:
-        other: "Știri"
+        other: Știri
       written_statement:
         one: 'Declarație scrisă către Parlament '
         few:
         other: 'Declarații scrise către Parlament '
+    contents: Conținut
     metadata:
       published: Data publicării
       updated: Actualizat
-    contents: Conținut
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Document
       few:
       other: Documente
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Informaţii despre ambasadă
-    publication_scheme_html: Citește mai multe despre informațiile pe care le publigăm
-      în mod regulat pe  %{link}.
     personal_information_charter_html: Mai multe despre cum folosim informațiile cu
       caracter personal pe %{link}
+    publication_scheme_html: Citește mai multe despre informațiile pe care le publigăm
+      în mod regulat pe  %{link}.
+    social_media_use_html: 'Citește mai multe despre strategia noastră pe '
     welsh_language_scheme_html: Află mai multe despre angajamentul nostru față de
       accesul la informații publice pe %{link}.
-    social_media_use_html: 'Citește mai multe despre strategia noastră pe '
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    ro: Română
+  time:
+    formats:
+      short_ordinal:

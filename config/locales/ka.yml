@@ -1,7 +1,6 @@
 ka:
-  language_names:
-    ka: "ქართული"
   content_item:
+    contents:
     format:
       announcement:
         one:
@@ -69,7 +68,13 @@ ka:
       map:
         one:
         other:
+      national:
+        one:
+        other:
       national_statistics:
+        one:
+        other:
+      national_statistics_announcement:
         one:
         other:
       news_article:
@@ -79,6 +84,15 @@ ka:
         one:
         other:
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one:
+        other:
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -120,10 +134,13 @@ ka:
       statistical_data_set:
         one:
         other:
-      official_statistics:
+      statistics_announcement:
         one:
         other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -141,18 +158,23 @@ ka:
     metadata:
       published:
       updated:
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information:
+    personal_information_charter_html:
+    publication_scheme_html:
+    social_media_use_html:
+    welsh_language_scheme_html:
   detailed_guide:
-    related_mainstream_content:
     related_guides:
+    related_mainstream_content:
+  language_names:
+    ka: ქართული
   publication:
+    details:
     documents:
       one:
       other:
-  corporate_information_page:
-    corporate_information:
-    publication_scheme_html:
-    personal_information_charter_html:
-    welsh_language_scheme_html:
-    social_media_use_html:
-    about_our_services_html:
+  time:
+    formats:
+      short_ordinal:

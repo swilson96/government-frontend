@@ -1,6 +1,4 @@
 es:
-  language_names:
-    es: Español
   content_item:
     format:
       announcement:
@@ -69,9 +67,15 @@ es:
       map:
         one: Mapa
         other: Mapas
+      national:
+        one:
+        other:
       national_statistics:
         one: Estadísticas - cifras nacionales
         other: Estadísticas - cifras nacionales
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artículo
         other: Artículos
@@ -79,6 +83,15 @@ es:
         one: Noticia
         other: Noticias
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Estadísticas
+        other: Estadísticas
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -120,10 +133,13 @@ es:
       statistical_data_set:
         one: Conjunto de datos estadísticos
         other: Conjuntos de datos estadísticos
-      official_statistics:
-        one: Estadísticas
-        other: Estadísticas
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -138,24 +154,30 @@ es:
       written_statement:
         one: Declaración escrita
         other: Declaraciones escritas
+    contents:
     metadata:
       published: Publicado
       updated: Actualizado
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Documento
       other: Documentos
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Información corporativa
-    publication_scheme_html: Lea acerca del tipo de información que publicamos en
-      el siguiente enlace %{link}
     personal_information_charter_html: El siguiente enlace %{link} explica cómo tratamos
       tu información personal
+    publication_scheme_html: Lea acerca del tipo de información que publicamos en
+      el siguiente enlace %{link}
+    social_media_use_html: Lea nuestra política en %{link}
     welsh_language_scheme_html: 'Encuentre más sobre nuestro compromiso de publicar
       en %{link} '
-    social_media_use_html: Lea nuestra política en %{link}
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    es: Español
+  time:
+    formats:
+      short_ordinal:

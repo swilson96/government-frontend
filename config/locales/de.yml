@@ -1,6 +1,4 @@
 de:
-  language_names:
-    de: Deutsch
   content_item:
     format:
       announcement:
@@ -69,9 +67,15 @@ de:
       map:
         one: Karte
         other: Karten
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistik - Nationale Statistik
         other: Statistik - Nationale Statistik
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artikel
         other: Artikel
@@ -79,6 +83,15 @@ de:
         one: Meldung
         other: Meldungen
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistik
+        other: Statistiken
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -120,10 +133,13 @@ de:
       statistical_data_set:
         one: Statistischer Datensatz
         other: Statistische Datensätze
-      official_statistics:
-        one: Statistik
-        other: Statistiken
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -138,24 +154,30 @@ de:
       written_statement:
         one: Schriftliche Erklärung vor dem Parlament
         other: Schriftliche Erklärungen vor dem Parlament
+    contents:
     metadata:
       published: Veröffentlicht
       updated: Aktualisiert
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Dokument
       other: Dokumente
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Administrative Informationen
-    publication_scheme_html: Lesen Sie hier %{link}, welche Informationen wir routinemäßig
-      publizieren
     personal_information_charter_html: Unser %{link} erklärt, wie wir Ihre personenbezogenen
       Daten schützen.
+    publication_scheme_html: Lesen Sie hier %{link}, welche Informationen wir routinemäßig
+      publizieren
+    social_media_use_html: Unsere Politik zu %{link}
     welsh_language_scheme_html: Mehr zu unserer Verpflichtung zur Veröffentlichung
       in %{link}
-    social_media_use_html: Unsere Politik zu %{link}
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    de: Deutsch
+  time:
+    formats:
+      short_ordinal:

@@ -1,6 +1,4 @@
 sr:
-  language_names:
-    sr: Srpski
   content_item:
     format:
       announcement:
@@ -113,11 +111,21 @@ sr:
         few:
         many:
         other: mape
+      national:
+        one:
+        few:
+        many:
+        other:
       national_statistics:
         one: statistika - nacionalna statistika
         few:
         many:
         other: statistika - nacionalna statistika
+      national_statistics_announcement:
+        one:
+        few:
+        many:
+        other:
       news_article:
         one: Vest
         few:
@@ -129,6 +137,21 @@ sr:
         many:
         other: Vesti
       notice:
+        one:
+        few:
+        many:
+        other:
+      official:
+        one:
+        few:
+        many:
+        other:
+      official_statistics:
+        one: statistika
+        few:
+        many:
+        other: statistika
+      official_statistics_announcement:
         one:
         few:
         many:
@@ -198,12 +221,17 @@ sr:
         few:
         many:
         other: set statističkih podataka
-      official_statistics:
-        one: statistika
+      statistics_announcement:
+        one:
         few:
         many:
-        other: statistika
+        other:
       statutory_guidance:
+        one:
+        few:
+        many:
+        other:
+      take_part:
         one:
         few:
         many:
@@ -228,27 +256,31 @@ sr:
         few:
         many:
         other: Pisane predstavke Parlamentu
+    contents:
     metadata:
       published: objavljeno
       updated: ažurirano
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
-  html_publication:
-    see_more:
   publication:
     documents:
       one: Dokument
       few:
       many:
       other: Dokumenti
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Informacije o organizaciji
-    publication_scheme_html: Čitajte o tipovima informacija koje redovno objavljujemo
-      u  %{link}.
     personal_information_charter_html: "%{link} daje informacije o tome kako obrađujemo
       vaše lične podatke. "
-    welsh_language_scheme_html: Saznajte naš stav o objavljivanju u %{link}.
+    publication_scheme_html: Čitajte o tipovima informacija koje redovno objavljujemo
+      u  %{link}.
     social_media_use_html: Pročitajte o našoj politici prema  %{link}.
-    about_our_services_html:
+    welsh_language_scheme_html: Saznajte naš stav o objavljivanju u %{link}.
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    sr: Srpski
+  time:
+    formats:
+      short_ordinal:

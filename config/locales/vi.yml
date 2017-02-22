@@ -1,7 +1,6 @@
 vi:
-  language_names:
-    vi: Tiếng Việt
   content_item:
+    contents:
     format:
       announcement:
         one: Thông báo
@@ -55,8 +54,8 @@ vi:
         one: hướng dẫn
         other: hướng dẫn
       impact_assessment:
-        one: "Đánh giá tác động"
-        other: "Đánh giá tác động"
+        one: Đánh giá tác động
+        other: Đánh giá tác động
       imported:
         one: Loại tài liệu đính kèm
         other: Loại tài liệu đính kèm
@@ -69,9 +68,15 @@ vi:
       map:
         one: Bản đồ
         other: Các bản đồ
+      national:
+        one:
+        other:
       national_statistics:
         one: Thống kê - Thống kê quốc gia
         other: Thống kê - Thống kê quốc gia
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Tin tức
         other: Tin tức
@@ -79,6 +84,15 @@ vi:
         one: Câu chuyện tin tức
         other: Câu chuyện tin tức
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Thống kê
+        other: Thống kê
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -120,10 +134,13 @@ vi:
       statistical_data_set:
         one: Bộ dữ liệu thống kê
         other: Bộ dữ liệu thống kê
-      official_statistics:
-        one: Thống kê
-        other: Thống kê
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -139,23 +156,28 @@ vi:
         one: Tuyên bố bằng văn bản tới quốc hội
         other: Các Tuyên bố bằng văn bản tới quốc hội
     metadata:
-      published: "Đã xuất bản"
+      published: Đã xuất bản
       updated: Cập nhật
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Thông tin về phòng tổng hợp
+    personal_information_charter_html: "%{link} của chúng tôi giải thích cách chúng
+      tôi xử lý thông tin cá nhân của bạn"
+    publication_scheme_html: Xem các loại thông tin mà chúng tôi cập nhật thường xuyên
+      tại %{link}
+    social_media_use_html: Đọc chính sách của chúng tôi tại %{link}
+    welsh_language_scheme_html: Tìm hiểu các cam kết của chúng tôi trong việc công
+      bố thông tin tại %{link}
   detailed_guide:
-    related_mainstream_content:
     related_guides:
+    related_mainstream_content:
+  language_names:
+    vi: Tiếng Việt
   publication:
+    details:
     documents:
       one: Tài liệu
       other: Tài liệu
-  corporate_information_page:
-    corporate_information: Thông tin về phòng tổng hợp
-    publication_scheme_html: Xem các loại thông tin mà chúng tôi cập nhật thường xuyên
-      tại %{link}
-    personal_information_charter_html: "%{link} của chúng tôi giải thích cách chúng
-      tôi xử lý thông tin cá nhân của bạn"
-    welsh_language_scheme_html: Tìm hiểu các cam kết của chúng tôi trong việc công
-      bố thông tin tại %{link}
-    social_media_use_html: Đọc chính sách của chúng tôi tại %{link}
-    about_our_services_html:
+  time:
+    formats:
+      short_ordinal:

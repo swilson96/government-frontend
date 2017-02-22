@@ -1,6 +1,4 @@
 so:
-  language_names:
-    so: Soomaaliga
   content_item:
     format:
       announcement:
@@ -69,9 +67,15 @@ so:
       map:
         one: Khariidad
         other: Khariidado
+      national:
+        one:
+        other:
       national_statistics:
         one: Istaatistik - istaatistik qaran
         other: Istaatistik - istaatistik qaran
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Maqaal wareed
         other: Maqaallo wareed
@@ -79,6 +83,15 @@ so:
         one: Sheeko wareed
         other: Sheekooyin wareed
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Istaatistik
+        other: Istaatistik
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -120,10 +133,13 @@ so:
       statistical_data_set:
         one: Xirmo xog istaatistik ah
         other: Xirmooyin xog istaatistik ah
-      official_statistics:
-        one: Istaatistik
-        other: Istaatistik
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -138,26 +154,30 @@ so:
       written_statement:
         one: Hadal qoran oo loo gudbiyo baarlamaanka
         other: Hadallo qoran oo loo gudbiyo baarlamaanka
+    contents:
     metadata:
       published: La-daabacay/nashriyey
       updated: Wax lagu kordhiyey
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
-  html_publication:
-    see_more:
   publication:
     documents:
       one: Dokumenti
       other: Dokumentiyo
+    details:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Macluumaad ku saabsan hay'ad
-    publication_scheme_html: Akhri noocyada macluumaadka aan caadi ahaan ku daabacno/nashrinno
-      %{link} aan soo saarno.
     personal_information_charter_html: "%{link} ayaa sharxaya sida aan ula tacaamulno
       macluumaadkaaga shakhsiga ah"
+    publication_scheme_html: Akhri noocyada macluumaadka aan caadi ahaan ku daabacno/nashrinno
+      %{link} aan soo saarno.
+    social_media_use_html: Akhri siyaasaddeenna ku saabsan %{link}.
     welsh_language_scheme_html: Wax ka ogow sida aan ugu dadaalno ku daabacadda/nashrinta
       %{link}.
-    social_media_use_html: Akhri siyaasaddeenna ku saabsan %{link}.
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    so: Soomaaliga
+  time:
+    formats:
+      short_ordinal:

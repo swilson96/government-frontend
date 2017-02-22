@@ -1,7 +1,6 @@
 tr:
-  language_names:
-    tr: Türkçe
   content_item:
+    contents:
     format:
       announcement:
         one: Duyuru
@@ -10,8 +9,8 @@ tr:
         one: Yazılan makale
         other: Yazılan makaleler
       case_study:
-        one: "Örnek Olay"
-        other: "Örnek Olaylar"
+        one: Örnek Olay
+        other: Örnek Olaylar
       closed_consultation:
         one: Sona eren çalışmalar
         other: Sona eren çalışmalar
@@ -40,8 +39,8 @@ tr:
         one: Taslak metin
         other: Taslak metinler
       fatality_notice:
-        one: "Ölüm ilanı"
-        other: "Ölüm ilanları"
+        one: Ölüm ilanı
+        other: Ölüm ilanları
       foi_release:
         one: Bilgi edinme hakkı raporu
         other: Bilgi edinme hakkı raporları
@@ -69,9 +68,15 @@ tr:
       map:
         one: Harita
         other: Haritalar
+      national:
+        one:
+        other:
       national_statistics:
-        one: "İstatistikler - ulusal istatistikler"
-        other: "İstatistikler - ulusal istatistikler"
+        one: İstatistikler - ulusal istatistikler
+        other: İstatistikler - ulusal istatistikler
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Makale
         other: Makaleler
@@ -79,6 +84,15 @@ tr:
         one: Haber
         other: Haberler
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: İstatistikler
+        other: İstatistikler
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -118,12 +132,15 @@ tr:
         one: Parlamento'ya yapılan açıklama
         other: Parlamento'ya yapılan açıklamalar
       statistical_data_set:
-        one: "İstatiksel veri setleri"
-        other: "İstatiksel veri setleri"
-      official_statistics:
-        one: "İstatistikler"
-        other: "İstatistikler"
+        one: İstatiksel veri setleri
+        other: İstatiksel veri setleri
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -141,22 +158,27 @@ tr:
     metadata:
       published: Yayında
       updated: Güncellendi
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Kurumsal bilgi
+    personal_information_charter_html: Bu %{link} bilgilerinizi nasıl sakladığımız
+      açıklamaktadır
+    publication_scheme_html: Rutin olarak yayınladığımız bilgiler için bu %{link}
+      'e bakınız
+    social_media_use_html: Konuyla ilgili politikamız hakkında daha fazla bilgi için
+      %{link}
+    welsh_language_scheme_html: Yayın hedefimiz ile ilgili bilgilere bu  %{link}ten
+      ulaşabilirsiniz.
   detailed_guide:
-    related_mainstream_content:
     related_guides:
+    related_mainstream_content:
+  language_names:
+    tr: Türkçe
   publication:
+    details:
     documents:
       one: Belge
       other: Belgeler
-  corporate_information_page:
-    corporate_information: Kurumsal bilgi
-    publication_scheme_html: Rutin olarak yayınladığımız bilgiler için bu %{link}
-      'e bakınız
-    personal_information_charter_html: Bu %{link} bilgilerinizi nasıl sakladığımız
-      açıklamaktadır
-    welsh_language_scheme_html: Yayın hedefimiz ile ilgili bilgilere bu  %{link}ten
-      ulaşabilirsiniz.
-    social_media_use_html: Konuyla ilgili politikamız hakkında daha fazla bilgi için
-      %{link}
-    about_our_services_html:
+  time:
+    formats:
+      short_ordinal:
