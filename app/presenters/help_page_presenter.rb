@@ -1,0 +1,2 @@
+class HelpPagePresenter < GovspeakPresenter
+end
