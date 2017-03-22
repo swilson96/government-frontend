@@ -1,12 +1,6 @@
 <% if contents.any? %>
   <nav role="navigation">
-    <h1><%= t("content_item.contents") %></h1>
-    <ol class="dash-list" data-module="track-click">
-      <% contents.each do |heading| %>
-        <li>
-          <%= heading %>
-        </li>
-      <% end %>
-    </ol>
+    <h1 class="contents-list-header"><%= t("content_item.contents") %>:</h1>
+    <%= render 'shared/contents_list', contents: contents %>
   </nav>
 <% end %>

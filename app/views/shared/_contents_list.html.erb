@@ -1,0 +1,34 @@
+<%
+  heading_level ||= 2
+  is_nested = contents.any? && contents.first[:items].present?
+%>
+
+<ol
+  data-module="track-click"
+  class="
+    contents-list
+    <% if is_nested %>
+      contents-list-nested
+    <% end %>
+  "
+>
+  <% contents.each do |contents_item| %>
+    <li>
+      <a
+        href="#<%= contents_item[:id]%>"
+        data-track-category="contentsClicked"
+        data-track-action="leftColumnH<%= heading_level %>"
+        data-track-label="<%= contents_item[:id]%>"
+      >
+        <%= contents_item[:text].try(:html_safe) %>
+      </a>
+      <% if contents_item[:items].present? %>
+        <%= render(
+          'shared/contents_list',
+          contents: contents_item[:items],
+          heading_level: heading_level + 1
+        ) %>
+      <% end %>
+    </li>
+  <% end %>
+</ol>

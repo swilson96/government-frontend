@@ -1,0 +1,57 @@
+$contents-list-indent-gutter: .4em;
+$contents-list-indent-width: $contents-list-indent-gutter + 1em;
+
+.contents-list-header {
+  margin-bottom: 5px;
+}
+
+.contents-list li {
+  font-weight: normal;
+  list-style-type: disc;
+  margin-left: $contents-list-indent-width;
+  margin-bottom: $gutter / 6;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 1px) { // target modern browsers
+    list-style-type: none;
+  }
+}
+
+// Remove underlines from lists of links
+// to improve legibility
+.contents-list a {
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+
+  @media (min-width: 1px) { // target modern browsers
+    &:before {
+      content: "\2014";
+      float: left;
+      margin-right: $contents-list-indent-gutter;
+      margin-left: $contents-list-indent-width * -1;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.contents-list-nested {
+  margin-bottom: $gutter-two-thirds;
+}
+
+.contents-list-nested li {
+  margin-left: 0;
+}
+
+.contents-list-nested > li {
+  font-weight: bold;
+  margin-left: $contents-list-indent-width;
+}
