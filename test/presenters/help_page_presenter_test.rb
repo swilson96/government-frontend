@@ -1,10 +1,10 @@
 require 'presenter_test_helper'
 
-class AnswerPresenterTest < PresenterTestCase
+class HelpPagePresenterTest < PresenterTestCase
   include ActionView::Helpers::UrlHelper
 
   def format_name
-    "help"
+    "help_page"
   end
 
   test 'presents the title' do
