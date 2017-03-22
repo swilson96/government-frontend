@@ -8,7 +8,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
     content_item["details"]["body"]
   end
 
-  def contents_items
+  def contents
     groups.map do |group|
       title = group["title"]
       { text: title, id: group_title_id(title) }

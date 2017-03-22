@@ -19,7 +19,7 @@ class CorporateInformationPagePresenter < ContentItemPresenter
     end
   end
 
-  def contents_items
+  def contents
     super + extra_headings
   end
 

@@ -10,7 +10,7 @@ class WorkingGroupPresenter < ContentItemPresenter
     content_item["details"]["body"]
   end
 
-  def contents_items
+  def contents
     super + extra_headings
   end
 

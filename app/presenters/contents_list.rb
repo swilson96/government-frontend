@@ -2,24 +2,7 @@ module ContentsList
   include ActionView::Helpers::UrlHelper
 
   def contents
-    contents_items.map do |item|
-      contents_link(item[:text], item[:id])
-    end
-  end
-
-  def contents_items
     extract_headings_with_ids(body)
-  end
-
-  def contents_link(text, id)
-    link_to(
-      text,
-      "##{id}",
-      data: {
-        track_category: 'contentsClicked',
-        track_action: 'leftColumnH2',
-        track_label: id
-      })
   end
 
 private

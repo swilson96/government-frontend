@@ -15,6 +15,25 @@ class SpecialistDocumentPresenter < ContentItemPresenter
     end
   end
 
+  def contents
+    headers = content_item.dig("details", "headers")
+    map_contents_items(headers)
+  end
+
+  def map_contents_items(headers)
+    headers.map do |header|
+      items = nil
+      if header['headers'].present? && header['level'] < 3
+        items = map_contents_items(header['headers'])
+      end
+      {
+        text: strip_trailing_colons(header['text']),
+        id: header['id'],
+        items: items
+      }
+    end
+  end
+
 private
 
   # first_published_at does not have reliable data
