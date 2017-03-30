@@ -1,15 +1,19 @@
 $contents-list-indent-gutter: .4em;
 $contents-list-indent-width: $contents-list-indent-gutter + 1em;
+$content-list-item-padding: 4px;
+
 
 .contents-list-header {
   margin-bottom: 5px;
+}
+.contents-list {
+  line-height: normal;
 }
 
 .contents-list li {
   font-weight: normal;
   list-style-type: disc;
   margin-left: $contents-list-indent-width;
-  margin-bottom: $gutter / 6;
 
   &:last-child {
     margin-bottom: 0;
@@ -17,6 +21,15 @@ $contents-list-indent-width: $contents-list-indent-gutter + 1em;
 
   @media (min-width: 1px) { // target modern browsers
     list-style-type: none;
+
+    &:before {
+      content: "\2014";
+      float: left;
+      margin-right: $contents-list-indent-gutter;
+      margin-left: $contents-list-indent-width * -1;
+      padding-top: $content-list-item-padding;
+      padding-bottom: $content-list-item-padding;
+    }
   }
 }
 
@@ -24,17 +37,11 @@ $contents-list-indent-width: $contents-list-indent-gutter + 1em;
 // to improve legibility
 .contents-list a {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: $gutter / 6;
   text-decoration: none;
 
-  @media (min-width: 1px) { // target modern browsers
-    &:before {
-      content: "\2014";
-      float: left;
-      margin-right: $contents-list-indent-gutter;
-      margin-left: $contents-list-indent-width * -1;
-    }
-  }
+  padding-top: $content-list-item-padding;
+  padding-bottom: $content-list-item-padding;
 
   &:hover,
   &:focus,
