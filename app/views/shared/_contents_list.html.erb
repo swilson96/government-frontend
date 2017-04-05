@@ -1,14 +1,19 @@
 <%
   heading_level ||= 2
+  is_top_level = heading_level == 2
   is_nested = contents.any? && contents.first[:items].present?
 %>
 
 <ol
-  data-module="track-click"
+  <% if is_top_level %>
+    data-module="track-click"
+  <% end %>
   class="
-    contents-list
-    <% if is_nested %>
+    <% if is_top_level %>
+      contents-list
+      <% if is_nested  %>
       contents-list-nested
+      <% end %>
     <% end %>
   "
 >

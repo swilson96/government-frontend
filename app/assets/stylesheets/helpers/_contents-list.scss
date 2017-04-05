@@ -6,12 +6,12 @@ $content-list-item-padding: 4px;
 .contents-list-header {
   margin-bottom: 5px;
 }
+
 .contents-list {
   line-height: normal;
 }
 
 .contents-list li {
-  font-weight: normal;
   list-style-type: disc;
   margin-left: $contents-list-indent-width;
 
@@ -55,10 +55,10 @@ $content-list-item-padding: 4px;
 }
 
 .contents-list-nested li {
-  margin-left: 0;
+  font-weight: bold;
 }
 
-.contents-list-nested > li {
-  font-weight: bold;
-  margin-left: $contents-list-indent-width;
+.contents-list-nested ol li {
+  font-weight: normal;
+  margin-left: 0;
 }
