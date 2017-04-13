@@ -11,6 +11,11 @@ Rails.application.routes.draw do
         variant: /print/
       }
 
+  get '*path.:format' => 'pdf_renderer#show',
+      constraints: {
+        format: /pdf/,
+      }
+
   # FIXME: Update when https://trello.com/c/w8HN3M4A/ is ready
   get 'foreign-travel-advice/:country/:part' => 'travel_advice#show'
 

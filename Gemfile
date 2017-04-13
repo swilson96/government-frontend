@@ -23,6 +23,9 @@ gem 'rails-controller-testing', '~> 0.1'
 gem 'govuk_ab_testing', '~> 2.0'
 gem 'htmlentities', '4.3.4'
 gem 'statsd-ruby', '1.3.0', require: 'statsd'
+gem 'nokogiri', '~> 1.6'
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary-edge', '~> 0.12.4.0'
 
 if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'

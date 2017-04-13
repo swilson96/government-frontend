@@ -22,6 +22,24 @@ class PublicationPresenter < ContentItemPresenter
 private
 
   def documents_list
-    content_item["details"]["documents"]
+    @documents_list ||= append_pdf_link_to_html_attachments(content_item["details"]["documents"])
+  end
+
+  # TODO: Move this logic into Whitehall
+  def append_pdf_link_to_html_attachments(documents_html)
+    documents_html.map do |document_html|
+      section = Nokogiri::HTML.fragment(document_html)
+      metadata = section.css('.metadata').first
+      type = metadata.css('.type').first
+
+      if type.nil? || type.text.strip != 'HTML'
+        document_html
+      else
+        html_attachment_path = section.css('.title a').attr('href')
+        href = "#{html_attachment_path}.pdf"
+        metadata.prepend_child("<a href='#{href}' class='download-pdf'>Download as PDF</a>")
+        section.to_html
+      end
+    end
   end
 end
