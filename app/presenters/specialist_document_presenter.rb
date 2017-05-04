@@ -169,13 +169,15 @@ private
   # details.first_public_at is not provided
   # https://trello.com/c/xCJ3RN6W/
   #
-  # Instead use first date in change history
+  # * Use published date in facets if provided
+  # * Use first date in change history when present
+  # * When there is no history there have been no changes, use `public_updated_at`
   def first_public_at
     if facet_values[first_published_at_facet_key]
       facet_values[first_published_at_facet_key]
     else
       changes = reverse_chronological_change_history
-      changes.any? ? changes.last[:timestamp] : nil
+      changes.any? ? changes.last[:timestamp] : public_updated_at
     end
   end
 
