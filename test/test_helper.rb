@@ -5,7 +5,6 @@ ENV['GOVUK_ASSET_ROOT'] = 'http://static.test.gov.uk'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'capybara/rails'
-require 'slimmer/test_helpers/govuk_components'
 require 'mocha/mini_test'
 
 Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
@@ -22,25 +21,15 @@ end
 
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
-  include Slimmer::TestHelpers::GovukComponents
 
   def setup
     stub_shared_component_locales
   end
 end
 
-# Note: This is so that slimmer is skipped, preventing network requests for
-# content from static (i.e. core_layout.html.erb).
-class ActionController::Base
-  before_action proc {
-    response.headers[Slimmer::Headers::SKIP_HEADER] = "true" unless ENV["USE_SLIMMER"]
-  }
-end
-
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
-  include Slimmer::TestHelpers::GovukComponents
 
   def setup
     stub_shared_component_locales

@@ -1,24 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title><%= yield :title %> - GOV.UK</title>
+<% content_for :title, ' - GOV.UK' %>
+
+<% content_for :head do %>
   <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application" %><!--<![endif]-->
   <!--[if IE 6]><%= stylesheet_link_tag "application-ie6" %><script>var ieVersion = 6;</script><![endif]-->
   <!--[if IE 7]><%= stylesheet_link_tag "application-ie7" %><script>var ieVersion = 7;</script><![endif]-->
   <!--[if IE 8]><%= stylesheet_link_tag "application-ie8" %><script>var ieVersion = 8;</script><![endif]-->
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item.content_item } %>
+  <%= render partial: 'govuk_component/analytics_meta_tags', locals: {content_item: @content_item.content_item} %>
   <% if @content_item.description %>
-    <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
+    <meta name="description" content="<%= strip_tags(@content_item.description) %>"/>
   <% end %>
-  <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
+  <meta name="govuk:content-id" content="<%= @content_item.content_id %>"/>
   <%= @education_navigation_ab_test.analytics_meta_tag.html_safe if @education_navigation_ab_test.ab_test_applies? %>
-  <%= yield :extra_head_content %>
-</head>
-<body>
+<% end %>
+
+<% content_for :wrapper_content do %>
   <% unless content_for(:simple_header) %>
-    <%= render partial: 'govuk_component/government_navigation', locals: { active: active_proposition } %>
+    <%= render partial: 'govuk_component/government_navigation', locals: {active: active_proposition} %>
   <% end %>
 
   <div id="wrapper" class="<%= wrapper_class %>">
@@ -28,5 +27,6 @@
       <%= yield %>
     </main>
   </div>
-</body>
-</html>
+<% end %>
+
+<%= parent_layout 'core_layout' %>

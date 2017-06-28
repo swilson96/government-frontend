@@ -1,5 +1,5 @@
 <% # THIS IS PART OF EDUCATION NAVIGATION A/B TESTING - PLEASE KEEP IN SYNC WITH +new_navigation.erb %>
 
 <% if @content_item.breadcrumbs.any? %>
-  <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
+  <%= render GovukRailsEngine::BreadcrumbRenderer.render(@content_item.content_item) %>
 <% end %>
