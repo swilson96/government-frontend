@@ -21,19 +21,11 @@ end
 
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
-
-  def setup
-    stub_shared_component_locales
-  end
 end
 
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
-
-  def setup
-    stub_shared_component_locales
-  end
 
   def assert_has_component_metadata_pair(label, value)
     assert_component_parameter("metadata", label, value)
