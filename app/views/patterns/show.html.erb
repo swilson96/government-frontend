@@ -1,0 +1,44 @@
+<% content_for :simple_header, true %>
+<style>
+  h2 {
+    font-weight: bold;
+  }
+
+  pre {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .pattern-example {
+    border: 2px solid #ccc;
+    padding: 45px;
+    margin: 15px 0;
+    position: relative;
+  }
+
+  .pattern-example:before {
+    font-size: 14px;
+    content: "EXAMPLE";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.21053em 0.78947em;
+    background: #ccc;
+    color: #fff;
+  }
+</style>
+
+<%= render 'govuk_component/title', title: @partial_name.humanize %>
+
+<% @documentation["fixtures"].keys.each do |fixture_name| %>
+  <% fixture = @documentation["fixtures"][fixture_name] %>
+  <h2>
+    <%= fixture_name.humanize %>
+  </h2>
+  <pre><%= fixture %></pre>
+
+  <div class="pattern-example">
+    <%= render partial: "shared/#{@partial_name}", locals: fixture.symbolize_keys %>
+  </div>
+<% end %>

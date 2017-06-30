@@ -1,0 +1,7 @@
+name: Description
+description: Leading paragraph
+fixtures:
+  default:
+    description: "Test"
+  another:
+    description: "Test"
