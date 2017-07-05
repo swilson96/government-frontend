@@ -5,6 +5,7 @@ ruby File.read(".ruby-version").strip
 gem 'airbrake', '~> 5.5'
 gem 'airbrake-ruby', '1.5'
 
+gem 'govuk_publishing_components', path: '../govuk_publishing_components'
 gem 'govuk_frontend_toolkit', '5.1.0'
 gem 'govuk_elements_rails', '3.0.1'
 gem 'logstasher', '0.6.1'

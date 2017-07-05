@@ -1,0 +1,7 @@
+<% if description && description.present? %>
+  <p class="govuk-pc-description">
+    <%# TODO: Should helper be scoped to component somehow? %>
+    <%# nbsp_between_last_two_words(description) %>
+    <%= description %>
+  </p>
+<% end %>
