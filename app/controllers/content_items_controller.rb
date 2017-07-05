@@ -1,6 +1,7 @@
 require 'gds_api/content_store'
 
 class ContentItemsController < ApplicationController
+  layout 'content_item'
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::InvalidUrl, with: :error_notfound
