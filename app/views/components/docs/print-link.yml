@@ -1,0 +1,6 @@
+name: Print link
+description: A link with a print icon
+fixtures:
+  default:
+    href: /print
+    text: 'Print this guide'

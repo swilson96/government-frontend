@@ -1,0 +1,6 @@
+name: Withdrawal notice
+description: A banner that displays when content is withdrawn
+fixtures:
+  default:
+    title: 'This consultation was withdrawn on 20 April 2017'
+    explanation_html: '<p>A supporting paragraph</p>'
