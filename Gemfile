@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 
 ruby File.read(".ruby-version").strip
 
-gem 'airbrake', '~> 5.5'
-gem 'airbrake-ruby', '1.5'
+gem 'airbrake', github: 'alphagov/airbrake', branch: 'silence-dep-warnings-for-rails-5'
 
 gem 'asset_bom_removal-rails', '~> 1.0.0'
 gem 'dalli'
@@ -42,6 +41,8 @@ group :development do
 end
 
 group :test do
+  gem 'axe-matchers', '~> 1.3.0'
+  gem 'rspec', '~> 3.6'
   gem 'capybara'
   gem 'mocha'
   gem 'poltergeist', require: false
