@@ -19,6 +19,16 @@ GIT
       railties (>= 3.2.0)
       sprockets-rails
 
+PATH
+  remote: ../govuk_publishing_components
+  specs:
+    govuk_publishing_components (0.8.0)
+      govspeak (>= 5.0.3)
+      govuk_frontend_toolkit
+      rails (>= 5.0.0.1)
+      sass-rails (>= 5.0.4)
+      slimmer
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -125,12 +135,6 @@ GEM
       sass (>= 3.2.0)
     govuk_navigation_helpers (6.3.0)
       gds-api-adapters (>= 43.0)
-    govuk_publishing_components (0.5.0)
-      govspeak (~> 5.0.3)
-      govuk_frontend_toolkit
-      rails (~> 5.0.0, >= 5.0.0.1)
-      sass-rails (~> 5.0.4)
-      slimmer
     govuk_schemas (2.1.0)
       json-schema (~> 2.5.0)
     highline (1.7.8)
@@ -325,7 +329,7 @@ DEPENDENCIES
   govuk_ab_testing (~> 2.0)
   govuk_frontend_toolkit (= 5.1.0)
   govuk_navigation_helpers (~> 6.3)
-  govuk_publishing_components (~> 0.5.0)
+  govuk_publishing_components!
   govuk_schemas
   htmlentities (= 4.3.4)
   jasmine-rails!
