@@ -6,13 +6,18 @@ accessibility_criteria: |
 
   - be visually distinct from other content on the page
   - have a contrast ratio higher than 4.5:1 against the background colour to meet WCAG AA
-fixtures:
+examples:
   default:
-    text: 'This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government'
+    data:
+      text: 'This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government'
   banner_with_title:
-    title: 'Summary'
-    text: 'This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government'
+    data:
+      title: 'Summary'
+      text: 'This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government'
+    context:
+      right_to_left: true
   banner_with_aside:
-    title: 'Summary'
-    text: 'This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government'
-    aside: 'This consultation ran from 9:30am on 30 January 2017 to 5pm on 28 February 2017'
+    data:
+      title: 'Summary'
+      text: 'This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government'
+      aside: 'This consultation ran from 9:30am on 30 January 2017 to 5pm on 28 February 2017'
