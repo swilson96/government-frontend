@@ -28,7 +28,9 @@
 
     <%= render 'components/print-link', href: @content_item.print_link, link_text: t("multi_page.print_entire_guide") %>
   </div>
-  <div class="column-one-third add-title-margin">
-    <%= render 'govuk_component/related_items', @content_item.related_items %>
+  <div class="column-one-third">
+    <div class="add-title-margin">
+      <%= render 'govuk_component/related_items', @content_item.related_items %>
+    </div>
   </div>
 </div>

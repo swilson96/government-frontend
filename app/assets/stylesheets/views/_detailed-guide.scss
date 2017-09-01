@@ -1,6 +1,6 @@
 .detailed-guide {
   @include sidebar-with-body;
-  @include taxonomy-sidebar;
+  @include add-title-margin;
 
   .direction-rtl & {
     direction: rtl;
