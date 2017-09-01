@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 ruby File.read(".ruby-version").strip
 
 gem 'airbrake', github: 'alphagov/airbrake', branch: 'silence-dep-warnings-for-rails-5'
+
+# AWS is used to upload visual regression screenshots from Heroku to S3
+gem 'aws-sdk', '~> 2', require: ENV['HEROKU_APP_NAME'].to_s.length.positive?
 gem 'asset_bom_removal-rails', '~> 1.0.0'
 gem 'dalli'
 gem 'gds-api-adapters', '~> 43.0'
