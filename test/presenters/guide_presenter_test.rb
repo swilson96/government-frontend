@@ -83,9 +83,8 @@ class GuidePresenterTest
       assert_equal nav, {}
     end
 
-    test "sends Airbrake notification for guide with no parts" do
-      Airbrake.expects(:notify).with('Guide with no parts',
-        error_message: 'Guide rendered without any parts at /correct-marriage-registration')
+    test "sends an error notification for guide with no parts" do
+      GovukError.expects(:notify).once
 
       presented_item('no-part-guide').has_parts?
     end

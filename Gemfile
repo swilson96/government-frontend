@@ -2,11 +2,11 @@ source 'https://rubygems.org'
 
 ruby File.read(".ruby-version").strip
 
-gem 'airbrake', github: 'alphagov/airbrake', branch: 'silence-dep-warnings-for-rails-5'
 gem 'asset_bom_removal-rails', '~> 1.0.0'
 gem 'dalli'
 gem 'gds-api-adapters', '~> 47.9.1'
 gem 'govuk_ab_testing', '~> 2.0'
+gem 'govuk_app_config', '~> 0.2.0'
 gem 'govuk_frontend_toolkit', '5.1.0'
 gem 'govuk_publishing_components', '~> 1.8.2', require: false
 gem 'htmlentities', '4.3.4'
@@ -19,7 +19,6 @@ gem 'rails-i18n', '>= 4.0.4'
 gem 'rails_translation_manager', '~> 0.0.2'
 gem 'sass-rails', '~> 5.0.4'
 gem 'slimmer', '~> 11.0.2'
-gem 'statsd-ruby', '1.3.0', require: 'statsd'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
 
