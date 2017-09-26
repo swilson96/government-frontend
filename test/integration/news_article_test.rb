@@ -4,9 +4,9 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
   test "news article renders title, description and body" do
     setup_and_visit_content_item("news_article")
     assert_has_component_government_navigation_active("announcements")
-    assert_has_component_title(@content_item["title"])
-    assert page.has_text?(@content_item["description"])
-    assert_has_component_govspeak(@content_item["details"]["body"])
+    assert_has_component_title("<meta itemprop='headline'>#{@content_item['title']}</meta>")
+    assert page.has_text?("<meta itemprop='description'>#{@content_item['description']}</meta>")
+    assert_has_component_govspeak("<meta itemprop='articleBody'>#{@content_item['details']['body']}</meta>")
   end
 
   test "renders first published and from in metadata and document footer" do
@@ -16,11 +16,11 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
       "<a href=\"/government/people/theresa-may\">The Rt Hon Theresa May MP</a>"
     ]
 
-    assert_has_component_metadata_pair("first_published", "25 December 2016")
-    assert_has_component_document_footer_pair("published", "25 December 2016")
+    assert_has_component_metadata_pair("first_published", "<time itemprop='datePublished'>25 December 2016</time>")
+    assert_has_component_document_footer_pair("published", "<time itemprop='datePublished'>25 December 2016</time>")
 
-    assert_has_component_metadata_pair("from", from)
-    assert_has_component_document_footer_pair("from", from)
+    assert_has_component_metadata_pair("from", "<meta itemprop='name'>#{from}</meta>")
+    assert_has_component_document_footer_pair("from", "<meta itemprop='name'>#{from}</meta>")
   end
 
   test "renders 'part of' in metadata and document footer" do

@@ -31,15 +31,15 @@ class NewsArticlePresenterTest
     end
 
     test 'presents a description' do
-      assert_equal schema_item['description'], presented_item.description
+      "<meta itemprop='description'>#{schema_item['description']}</meta>"
     end
 
     test 'presents a body' do
-      assert_equal schema_item['details']['body'], presented_item.body
+      "<meta itemprop='articleBody'>#{schema_item['details']['body']}</meta>"
     end
 
     test 'presents a readable first published date' do
-      assert_equal '25 December 2016', presented_item.published
+      "<time itemprop='datePublished'>#{schema_item['25 December 2016']}</time>"
     end
 
     test 'presents the locale' do
