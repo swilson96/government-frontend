@@ -113,18 +113,15 @@ class SpecialistDocumentPresenterTest
       )
     end
 
-    test 'removes first published dates for bulk published documents' do
+    test 'displays first published dates regardless of bulk publishing' do
       example = schema_item('aaib-reports')
       example["details"]["metadata"]["bulk_published"] = true
 
-      refute present_example(example).metadata[:first_published]
-      refute present_example(example).document_footer[:published]
-
-      example["details"]["metadata"]["bulk_published"] = false
       assert present_example(example).metadata[:first_published]
       assert present_example(example).document_footer[:published]
 
-      example["details"]["metadata"] = {}
+      example["details"]["metadata"]["bulk_published"] = false
+
       assert present_example(example).metadata[:first_published]
       assert present_example(example).document_footer[:published]
     end
