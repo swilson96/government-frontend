@@ -13,7 +13,7 @@ class EducationNavigationAbTestRequest
   end
 
   def ab_test_applies?
-    content_is_tagged_to_a_taxon? && content_schema_has_new_navigation?
+    false
   end
 
   def should_present_new_navigation_view?
