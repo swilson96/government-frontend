@@ -1,0 +1,13 @@
+.app-c-title-block {
+  @include responsive-bottom-margin;
+
+  hr {
+    margin-bottom: 15px;
+    border-width: 1px 0 0;
+    border-top: 1px solid $grey-2;
+  }
+
+  .pub-c-lead-paragraph {
+    margin-bottom: 15px;
+  }
+}

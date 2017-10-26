@@ -1,0 +1,15 @@
+<% lead_paragraph ||= false %>
+<% last_updated ||= false %>
+<% published ||= '' %>
+
+<div class="app-c-title-block">
+  <%= render 'govuk_component/title', { title: title } %>
+
+  <% if lead_paragraph %>
+    <%= render 'govuk_component/lead_paragraph', { text: lead_paragraph } %>
+  <% end %>
+
+  <hr />
+
+  <%= render 'components/published-dates', { published: published, last_updated: last_updated } %>
+</div>

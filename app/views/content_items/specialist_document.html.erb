@@ -1,16 +1,27 @@
 <% content_for :simple_header, true %>
 
-<%= render 'shared/title_and_translations', content_item: @content_item %>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'components/title-block', {
+        title: @content_item.title,
+        lead_paragraph: @content_item.description,
+        published: @content_item.published,
+        last_updated: @content_item.updated
+      } %>
+  </div>
+</div>
+
+<%= render 'components/important-metadata', {
+    items: @content_item.metadata[:other]
+  } %>
+
 <%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
 
 <div class="grid-row sidebar-with-body">
-  <% if @content_item.contents.any? %>
-    <div class="column-third">
+  <div class="column-two-thirds">
+    <% if @content_item.contents.any? %>
       <%= render 'components/contents-list', contents: @content_item.contents %>
-    </div>
-  <% end %>
-  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
+    <% end %>
     <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
 
     <% if @content_item.continuation_link %>

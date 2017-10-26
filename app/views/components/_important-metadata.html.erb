@@ -1,0 +1,12 @@
+<% items ||= [] %>
+<div class="app-c-important-metadata">
+  <% items.each_with_index do |(title, definition), index| %>
+    <%
+      definition ||= []
+      definition = Array(definition)
+    %>
+    <% if definition.any? %>
+      <%= title %>: <strong><%= definition.join(',').html_safe %></strong><br />
+    <% end %>
+  <% end %>
+</div>
