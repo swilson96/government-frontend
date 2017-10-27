@@ -1,7 +1,16 @@
-<%= render 'shared/title_and_translations', content_item: @content_item %>
-<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-<%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-<%= render 'shared/sidebar_image_with_body', content_item: @content_item %>
-<%= render 'shared/footer', @content_item.document_footer %>
+<%= render 'components/title-block', {
+    title: @content_item.title,
+    lead_paragraph: @content_item.description,
+    published: @content_item.published,
+    last_updated: @content_item.updated
+  } %>
+
+<%= render 'components/important-metadata', {
+    items: @content_item.metadata[:other]
+  } %>
+
+<div class="grid-row sidebar-with-body">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
+  </div>
+</div>
