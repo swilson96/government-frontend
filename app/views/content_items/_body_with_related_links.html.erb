@@ -17,5 +17,9 @@
       </p>
     <% end %>
   </div>
-  <%= render 'shared/related_items', content_item: @content_item  %>
+  <% if show_tasklist_sidebar? %>
+    <%= render 'govuk_component/task_list', tasklist: tasklist[:tasklist] %>
+  <% else %>
+    <%= render 'shared/related_items', content_item: @content_item  %>
+  <% end %>
 </div>
