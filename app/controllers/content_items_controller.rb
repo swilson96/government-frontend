@@ -66,7 +66,7 @@ private
     end
 
     with_locale do
-      if tasklist_ab_test_applies?
+      if true # tasklist_ab_test_applies?
         render content_item_template, locals: {
           tasklist: configure_current_task(TasklistContent.learn_to_drive_config)
         }

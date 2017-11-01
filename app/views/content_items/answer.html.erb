@@ -1,1 +1,5 @@
-<%= render 'content_items/body_with_related_links' %>
+<% if tasklist %>
+  <%= render 'content_items/body_with_related_links', tasklist: tasklist %>
+<% else %>
+  <%= render 'content_items/body_with_related_links', tasklist: tasklist %>
+<% end %>
