@@ -13,11 +13,11 @@ class EducationNavigationAbTestRequest
   end
 
   def ab_test_applies?
-    false
+    true
   end
 
   def should_present_new_navigation_view?
-    ab_test_applies? && @requested_variant.variant?("B")
+    true
   end
 
   def set_response_vary_header(response)
