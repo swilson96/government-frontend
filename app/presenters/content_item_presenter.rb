@@ -55,7 +55,7 @@ class ContentItemPresenter
   end
 
   def taxonomy_sidebar
-    @nav_helper.taxonomy_sidebar
+    {}
   end
 
   def related_items
