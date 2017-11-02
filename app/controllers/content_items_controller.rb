@@ -66,13 +66,15 @@ private
     end
 
     with_locale do
-      if true # tasklist_ab_test_applies?
-        render content_item_template, locals: {
+      locals = {}
+
+      if tasklist_ab_test_applies?
+        locals[:locals] = {
           tasklist: configure_current_task(TasklistContent.learn_to_drive_config)
         }
-      else
-        render content_item_template
       end
+
+      render content_item_template, locals
     end
   end
 
