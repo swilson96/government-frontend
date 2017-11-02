@@ -26,6 +26,7 @@
   <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
   <%= tasklist_variant.analytics_meta_tag.html_safe if tasklist_ab_test_applies? %>
   <%= yield :extra_head_content %>
+  <%= @self_assessment_requested_variant.analytics_meta_tag.html_safe %>
 </head>
 <body>
   <% unless content_for(:simple_header) %>
