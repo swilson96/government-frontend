@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
 
   get 'healthcheck', to: proc { [200, {}, ['']] }
+  get 'interstitial', to: 'content_items#interstitial'
   get '*path/:variant' => 'content_items#show',
       constraints: {
         variant: /print/

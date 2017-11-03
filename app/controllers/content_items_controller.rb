@@ -20,6 +20,10 @@ class ContentItemsController < ApplicationController
     render_template
   end
 
+  def interstitial
+    render template: 'content_items/signin/interstitial'
+  end
+
 private
 
   # Allow guides to pass access token to each part to allow
