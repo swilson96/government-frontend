@@ -4,7 +4,23 @@ module ApplicationHelper
   end
 
   def wrapper_class
-    "direction-#{page_text_direction}" if page_text_direction
+    classes = []
+    classes << "direction-#{page_text_direction}" if page_text_direction
+    classes << "variant-#{navigation_variation}" if navigation_variation
+
+    classes.join(' ')
+  end
+
+  def navigation_variation
+    request.variant.any? && request.variant.first.to_s.dasherize
+  end
+
+  def universal_navigation?
+    navigation_variation == 'universal-navigation'
+  end
+
+  def taxonomy_navigation?
+    navigation_variation == 'taxonomy-navigation'
   end
 
   def active_proposition
