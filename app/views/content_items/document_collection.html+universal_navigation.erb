@@ -7,6 +7,7 @@
   </div>
 </div>
 
+<%= render 'components/published-dates', published: @content_item.published, last_updated: @content_item.updated %>
 <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
 <%= render 'shared/history_notice', content_item: @content_item %>
 

@@ -1,0 +1,11 @@
+name: Published dates
+description: Published and last updated dates
+accessibility_criteria: |
+  Markdown listing what this component must do to be accessible. For example:
+  The link must:
+  * be keyboard focusable
+examples:
+  default:
+    data:
+      published: 10 December 2016
+      last_updated: 9 August 2017
