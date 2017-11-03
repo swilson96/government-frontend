@@ -17,9 +17,11 @@
       </p>
     <% end %>
   </div>
-  <% if local_assigns.has_key?(:tasklist) && show_tasklist_sidebar? %>
-    <%= render 'shared/sidebar_tasklist', tasklist: tasklist %>
-  <% else %>
-    <%= render 'shared/related_items', content_item: @content_item %>
+  <% unless universal_navigation? %>
+    <% if local_assigns.has_key?(:tasklist) && show_tasklist_sidebar? %>
+      <%= render 'shared/sidebar_tasklist', tasklist: tasklist %>
+    <% else %>
+      <%= render 'shared/related_items', content_item: @content_item %>
+    <% end %>
   <% end %>
 </div>
