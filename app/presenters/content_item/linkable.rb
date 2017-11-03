@@ -37,7 +37,13 @@ module ContentItem
 
     def organisations_ordered_by_importance
       organisations_with_emphasised_first.map do |link|
-        link_to(link["title"], link["base_path"])
+        link_data = {
+          track_category: "metadataLinkClicked",
+          track_action: "link_type_organisations",
+          track_label: link["base_path"],
+        }
+
+        link_to(link["title"], link["base_path"], data: link_data)
       end
     end
 
@@ -54,12 +60,24 @@ module ContentItem
 
     def link_for_type(type, link)
       return link_for_world_location(link) if type == "world_locations"
-      link_to(link["title"], link["base_path"])
+      link_data = {
+        track_category: "metadataLinkClicked",
+        track_action: "link_type_#{type}",
+        track_label: link["base_path"],
+      }
+
+      link_to(link["title"], link["base_path"], data: link_data)
     end
 
     def link_for_world_location(link)
       base_path = WorldLocationBasePath.for(link)
-      link_to(link["title"], base_path)
+      link_data = {
+        track_category: "metadataLinkClicked",
+        track_action: "link_type_world_locations",
+        track_label: base_path,
+      }
+
+      link_to(link["title"], base_path, data: link_data)
     end
   end
 end
