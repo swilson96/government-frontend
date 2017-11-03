@@ -98,7 +98,9 @@ private
     # _breadcrumbs.html+taxonomy_navigation.erb instead. If this file doesn't exist,
     # then it falls back to _breadcrumbs.html.erb.  See:
     # http://edgeguides.rubyonrails.org/4_1_release_notes.html#action-pack-variants
-    if @navigation.should_present_taxonomy_navigation?
+    if @navigation.should_present_universal_navigation?
+      request.variant = :universal_navigation
+    elsif @navigation.should_present_taxonomy_navigation?
       request.variant = :taxonomy_navigation
     end
   end
