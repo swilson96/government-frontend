@@ -11,7 +11,24 @@ class NavigationType
   def should_present_universal_navigation?
     # TODO: Also check for test variant
     # content_is_tagged_to_a_taxon? && content_schema_is_guidance?
+    # in the AB test "content navigation"
+    # not in the "original" variant
     true
+  end
+
+  def universal_navigation_without_nav?
+    ## should_present_universal_navigation? && UniversalNoNav test variant
+    true
+  end
+
+  def universal_navigation_with_taxonomy_nav?
+    ## should_present_universal_navigation? && UniversalTaxonNav test variant
+    false
+  end
+
+  def universal_navigation_with_mainstream_nav?
+    ## should_present_universal_navigation? && UniversalMainstreamNav test variant
+    false
   end
 
   def should_present_taxonomy_navigation?
