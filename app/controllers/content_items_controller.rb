@@ -46,17 +46,18 @@ class ContentItemsController < ApplicationController
   end
 
   def sign_in_options
-    raise "You have broke the internet #{params}"
-    
-    if params["sign-in-option"] == "government-gateway"
-      redirect_to "https://www.tax.service.gov.uk/account"
-    elsif params["sign-in-option"] == "govuk-verify"
-      redirect_to "https://www.tax.service.gov.uk/ida/sa/login?SelfAssessmentSigninTestVariant=B"
-    elsif params["sign-in-option"] == "lost-account-details"
-      redirect_to lost_account_details_path
-    else
-      redirect_to choose_sign_in_path error: true
-    end
+    redirect_to 'http://gov.uk'
+    # raise "eje"
+    #
+    # if params["sign-in-option"] == "government-gateway"
+    #   redirect_to "https://www.tax.service.gov.uk/account"
+    # elsif params["sign-in-option"] == "govuk-verify"
+    #   redirect_to "https://www.tax.service.gov.uk/ida/sa/login?SelfAssessmentSigninTestVariant=B"
+    # elsif params["sign-in-option"] == "lost-account-details"
+    #   redirect_to lost_account_details_path
+    # else
+    #   redirect_to choose_sign_in_path error: true
+    # end
   end
 
 private
