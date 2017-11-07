@@ -46,6 +46,18 @@ class ContentItemsController < ApplicationController
   end
 
   def sign_in_options
+    puts '----------------------------------------------------------'
+    puts '----------------------------------------------------------'
+    puts '----------------------------------------------------------'
+    puts '----------------------------------------------------------'
+    puts params["sign-in-option"]
+    puts params["sign-in-option"]
+    puts params["sign-in-option"]
+
+    puts '----------------------------------------------------------'
+    puts '----------------------------------------------------------'
+    puts '----------------------------------------------------------'
+
     case params["sign-in-option"]
     when "government-gateway"
       redirect_to "https://www.tax.service.gov.uk/account"
