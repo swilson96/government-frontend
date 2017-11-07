@@ -46,24 +46,13 @@ class ContentItemsController < ApplicationController
   end
 
   def sign_in_options
-    logger.debug '----------------------------------------------------------'
-    logger.debug '----------------------------------------------------------'
-    logger.debug '----------------------------------------------------------'
-    logger.debug '----------------------------------------------------------'
-    logger.debug params["sign-in-option"]
-    logger.debug params["sign-in-option"]
-    logger.debug params["sign-in-option"]
-
-    logger.debug '----------------------------------------------------------'
-    logger.debug '----------------------------------------------------------'
-    logger.debug '----------------------------------------------------------'
-
-    case params["sign-in-option"]
-    when "government-gateway"
+    raise "You have broke the internet #{params}"
+    
+    if params["sign-in-option"] == "government-gateway"
       redirect_to "https://www.tax.service.gov.uk/account"
-    when "govuk-verify"
+    elsif params["sign-in-option"] == "govuk-verify"
       redirect_to "https://www.tax.service.gov.uk/ida/sa/login?SelfAssessmentSigninTestVariant=B"
-    when "lost-account-details"
+    elsif params["sign-in-option"] == "lost-account-details"
       redirect_to lost_account_details_path
     else
       redirect_to choose_sign_in_path error: true
