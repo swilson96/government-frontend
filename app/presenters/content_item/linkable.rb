@@ -18,11 +18,41 @@ module ContentItem
       })
     end
 
+    def mainstream_browse_pages
+      links_for_component('mainstream_browse_pages', 'mainstream')
+    end
+
+    def whitehall_topics
+      links_for_component('topics', 'whitehall')
+    end
+
+    def policies
+      links_for_component('related_policies', 'policy')
+    end
+
+    def organisations_for_component
+      links_for_component('organisations', 'organisation')
+    end
+
+    def roles_for_component
+      links_for_component('ministers', 'role')
+    end
+
   private
 
     def links(type)
       expanded_links_from_content_item(type).map do |link|
         link_for_type(type, link)
+      end
+    end
+
+    def links_for_component(type, rendering_type)
+      expanded_links_from_content_item(type).map do |link|
+        {
+          path: link["base_path"],
+          text: link["title"],
+          type: rendering_type
+        }
       end
     end
 
