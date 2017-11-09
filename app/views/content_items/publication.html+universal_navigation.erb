@@ -42,4 +42,23 @@
                  direction: page_text_direction %>
     </div>
   </div>
+
+  <div class="column-one-third">
+    <%= render "components/navigation-sidebar", {
+      curated_items: [
+        {
+          text: "Alternative provision",
+          path: "/government/publications/alternative-provision",
+          type: "mainstream"
+        },
+        {
+          text: "Whitehall topic",
+          path: "/government",
+          type: "whitehall"
+        }
+      ],
+      non_curated_items: [],
+      organisational_entities: []
+    } %>
+  </div>
 </div>

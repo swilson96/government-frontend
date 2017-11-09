@@ -1,0 +1,73 @@
+<%
+  curated_items ||= []
+  non_curated_items ||= []
+  organisational_entities ||=[]
+%>
+<div class="app-c-navigation-sidebar">
+  <h2>Related to this page</h2>
+
+  <% if curated_items.present? %>
+  <div class="navigation-group">
+    <ul class="navigation-links">
+      <% curated_items.each do |item| %>
+      <li>
+        <a href="<%= item[:path] %>">
+          <span class="contextual-title">
+            <% if item[:type] == "mainstream" %>
+              How to guide
+            <% elsif item[:type] == "whitehall" %>
+              Detailed guidance
+            <% end %>
+          </span>
+          <%= item[:text] %>
+        </a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <% if non_curated_items.present? %>
+  <div class="navigation-group">
+    <ul class="navigation-links">
+      <% non_curated_items.each do |item| %>
+      <li>
+        <a href="<%= item[:path] %>">
+          <span class="contextual-title">
+            <% if item[:type] == "policy" %>
+              Guidance about
+            <% end %>
+          </span>
+          <%= item[:text] %>
+        </a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <% if organisational_entities.present? %>
+  <div class="navigation-group">
+    <ul class="navigation-links">
+      <% organisational_entities.each do |item| %>
+      <li>
+        <a href="<%= item[:path] %>">
+          <span class="contextual-title">
+            <% if item[:type] == "organisation" %>
+              Guidance from
+            <% elsif item[:type] == "role" %>
+              Guidance from
+            <% elsif item[:type] == "person" %>
+              Guidance from
+            <% elsif item[:type] == "worldwide_location" %>
+              Guidance from
+            <% end %>
+          </span>
+          <%= item[:text] %>
+        </a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+</div>

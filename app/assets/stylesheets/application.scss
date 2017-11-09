@@ -45,3 +45,39 @@
 @import 'views/answer';
 @import 'views/help-page';
 @import "views/guide";
+
+.navigation-sidebar {
+  padding-left: $gutter;
+  
+  h2 {
+    @include bold-19;
+    margin-bottom: $gutter-one-third;
+  }
+
+  .navigation-group {
+    border-top: 2px solid $govuk-blue
+  }
+
+  .navigation-links {
+    list-style: none;
+    margin-top: $gutter-one-third;
+    margin-bottom: $gutter;
+
+    li {
+      margin-bottom: $gutter-half;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+
+      @include bold-19;
+
+      span {
+        @include core-16;
+        color: $text-colour;
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+name: navigation-sidebar
+description: Short description of component
+body: |
+  Optional markdown providing further detail about the component
+accessibility_criteria: |
+  Markdown listing what this component must do to be accessible. For example:
+
+  The link must:
+
+  * be keyboard focusable
+examples:
+  default:
+    data:
+      curated_items:
+      - text: 'Mainstream browse'
+        path: '/browse'
+        type: 'mainstream'
+      - text: 'Whitehall topic'
+        path: '/government/topic'
+        type: 'whitehall'
+      non_curated_items:
+      - text: 'Policy'
+        path: '/governemnt/policies'
+        type: 'policy'
+      organisational_entities:
+      - text: 'Department for Digital, Culture Media & Sport'
+        path: '/government/organisations'
+        type: 'organisation'
+      - text: 'Minister of State for Digital'
+        path: '/government/ministers/minister-of-state--22'
+        type: 'role'
+      - text: 'Matthew Hancock'
+        path: '/government/people/matthew-hancock'
+        type: 'person'
+      - text: 'Kenya'
+        path: '/world/kenya'
+        type: 'worldwide_location'
+    description: |
+      This component is used in the following contexts:
+
+      - [the GOV.UK homepage](https://www.gov.uk)
+  another_example:
+    data:
+      some_parameter: 'A different parameter value'
