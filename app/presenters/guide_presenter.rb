@@ -1,5 +1,6 @@
 class GuidePresenter < ContentItemPresenter
   include ContentItem::Parts
+  include ContentItem::Linkable
 
   attr_accessor :draft_access_token
 

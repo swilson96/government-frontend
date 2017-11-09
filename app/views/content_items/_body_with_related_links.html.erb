@@ -17,6 +17,15 @@
       </p>
     <% end %>
   </div>
+
+  <div class="column-one-third">
+    <%= render "components/navigation-sidebar", {
+      curated_items: @content_item.mainstream_browse_pages + @content_item.whitehall_topics,
+      non_curated_items: @content_item.policies,
+      organisational_entities: @content_item.organisations_for_component
+    } %>
+  </div>
+
   <% unless universal_navigation? %>
     <% if local_assigns.has_key?(:tasklist) && show_tasklist_sidebar? %>
       <%= render 'shared/sidebar_tasklist', tasklist: tasklist %>
