@@ -3,6 +3,11 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', { title: @content_item.title } %>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
     <% if @content_item.multi_page_guide? %>
       <aside class="part-navigation-container" role="complementary">
         <%= render 'shared/parts_navigation', content_item: @content_item, navigation_label: 'Pages in this guide' %>
