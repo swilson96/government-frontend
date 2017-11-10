@@ -35,6 +35,10 @@ examples:
       - text: 'Kenya'
         path: '/world/kenya'
         type: 'worldwide_location'
+      collections:
+      - text: 'Collection'
+        path: '/government/collection'
+        type: 'collection'
     description: |
       This component is used in the following contexts:
 

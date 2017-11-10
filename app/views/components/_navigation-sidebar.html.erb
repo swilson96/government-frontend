@@ -2,6 +2,7 @@
   curated_items ||= []
   non_curated_items ||= []
   organisational_entities ||=[]
+  collections ||=[]
 %>
 <div class="app-c-navigation-sidebar">
   <h2>Related to this page</h2>
@@ -66,6 +67,18 @@
           <%= item[:text] %>
         </a>
       </li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <% if collections.present? %>
+  <h2>In collections</h2>
+
+  <div class="navigation-group">
+    <ul class="collection-list">
+      <% collections.each do |item| %>
+      <li><a href="<%= item[:path] %>"><%= item[:text] %></a></li>
       <% end %>
     </ul>
   </div>

@@ -38,6 +38,10 @@ module ContentItem
       links_for_component('ministers', 'role')
     end
 
+    def collections
+      links_for_component('document_collections', 'collection')
+    end
+
   private
 
     def links(type)
