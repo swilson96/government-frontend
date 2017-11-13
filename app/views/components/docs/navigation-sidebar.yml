@@ -11,6 +11,13 @@ accessibility_criteria: |
 examples:
   default:
     data:
+      ordered_related_items:
+      - text: 'Related link'
+        path: '/random'
+        type: 'related'
+      - text: 'Another related link'
+        path: '/random'
+        type: 'related'
       curated_items:
       - text: 'Mainstream browse'
         path: '/browse'
@@ -37,6 +44,9 @@ examples:
         type: 'worldwide_location'
       collections:
       - text: 'Collection'
+        path: '/government/collection'
+        type: 'collection'
+      - text: 'Another collection'
         path: '/government/collection'
         type: 'collection'
     description: |

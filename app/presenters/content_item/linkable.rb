@@ -42,6 +42,10 @@ module ContentItem
       links_for_component('document_collections', 'collection')
     end
 
+    def ordered_related_items
+      links_for_component('ordered_related_items', 'related')
+    end
+
   private
 
     def links(type)

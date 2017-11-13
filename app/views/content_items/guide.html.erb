@@ -41,7 +41,8 @@
     <%= render "components/navigation-sidebar", {
       curated_items: @content_item.mainstream_browse_pages + @content_item.whitehall_topics,
       non_curated_items: @content_item.policies,
-      organisational_entities: @content_item.organisations_for_component
+      organisational_entities: @content_item.organisations_for_component,
+      ordered_related_items: @content_item.ordered_related_items
     } %>
   </div>
 

@@ -31,6 +31,16 @@
     }
   }
 
+  .related-list {
+    list-style: none;
+    margin-top: $gutter-one-third;
+    margin-bottom: $gutter;
+
+    li {
+      margin-bottom: $gutter-one-third;
+    }
+  }
+
   .collection-list {
     list-style: none;
     margin-top: $gutter-one-third;

@@ -3,9 +3,20 @@
   non_curated_items ||= []
   organisational_entities ||=[]
   collections ||=[]
+  ordered_related_items ||=[]
 %>
 <div class="app-c-navigation-sidebar">
   <h2>Related to this page</h2>
+
+  <% if ordered_related_items.present? %>
+  <div class="navigation-group">
+    <ul class="related-list">
+      <% ordered_related_items.each do |item| %>
+      <li><a href="<%= item[:path] %>"><%= item[:text] %></a></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 
   <% if curated_items.present? %>
   <div class="navigation-group">
