@@ -224,6 +224,9 @@ en:
       take_part:
         one: Take part
         other: Take part
+      transaction:
+        one: Transaction
+        other: Transactions
       transcript:
         one: Transcript
         other: Transcripts
