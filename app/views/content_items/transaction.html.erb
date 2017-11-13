@@ -23,7 +23,7 @@
         disable_youtube_expansions: true,
         rich_govspeak: true %>
 
-      <style>.app-u-mb-3 { margin-bottom: 30px !important; }</style>
+      <style>.app-u-mb-3 { margin-bottom: 45px !important; }</style>
 
       <%= render 'govuk_component/button',
         start: true,
@@ -49,5 +49,9 @@
       </p>
     <% end %>
   </div>
-  <%= render 'shared/related_items', content_item: @content_item %>
+  <% if local_assigns.has_key?(:tasklist) && show_tasklist_sidebar? %>
+    <%= render 'shared/sidebar_tasklist', tasklist: tasklist %>
+  <% else %>
+    <%= render 'shared/related_items', content_item: @content_item %>
+  <% end %>
 </div>
