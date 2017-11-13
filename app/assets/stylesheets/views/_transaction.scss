@@ -1,3 +1,7 @@
 .transaction {
+  @include add-title-margin;
 
+  .last-updated {
+    padding-bottom: $gutter-half;
+  }
 }

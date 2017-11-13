@@ -1,9 +1,53 @@
 <% content_for :simple_header, true %>
 
-<div class="grid-row">
+<div class="grid-row sidebar-with-body">
   <div class="column-two-thirds">
-    <%= render 'govuk_component/title', title: @content_item.title %>
-  </div>
-</div>
+    <section>
+      <%= render 'govuk_component/title', title: @content_item.title %>
 
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+      <% introductory_paragraph_govspeak = capture do %>
+        <%= @content_item.introductory_paragraph.try(:html_safe) %>
+
+        <% if @content_item.downtime_message.present? %>
+        <div class="application-notice help-notice">
+          <p>
+            <strong><%= @content_item.downtime_message %></strong>
+          </p>
+        </div>
+        <% end %>
+      <% end %>
+
+      <%= render 'govuk_component/govspeak',
+        content: introductory_paragraph_govspeak,
+        direction: page_text_direction,
+        disable_youtube_expansions: true,
+        rich_govspeak: true %>
+
+      <style>.app-u-mb-3 { margin-bottom: 30px !important; }</style>
+
+      <%= render 'govuk_component/button',
+        start: true,
+        rel: 'external',
+        href: @content_item.transaction_start_link,
+        text: @content_item.start_button_text,
+        info_text: "#{@content_item.will_continue_on}"
+      %>
+      <div class="app-u-mb-3"></div>
+    </section>
+
+    <section>
+      <%- if @content_item.multiple_more_information_sections? -%>
+        <%= render partial: 'content_items/transaction/additional_information_tabbed', locals: { transaction: @content_item } %>
+      <%- else -%>
+        <%= render partial: 'content_items/transaction/additional_information_single', locals: { transaction: @content_item } %>
+      <%- end -%>
+    </section>
+
+    <% if @content_item.last_updated %>
+      <p class="last-updated">
+        <%= t 'common.last_updated' %>: <%= @content_item.last_updated %>
+      </p>
+    <% end %>
+  </div>
+  <%= render 'shared/related_items', content_item: @content_item %>
+</div>

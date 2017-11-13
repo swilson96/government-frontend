@@ -1,0 +1,28 @@
+<% additional_information_single_govspeak = capture do %>
+  <% if transaction.more_information.present? %>
+    <div id="before-you-start">
+      <h2><%= t 'transaction.before_you_start' %></h2>
+      <%= transaction.more_information.try(:html_safe) %>
+    </div>
+  <% end %>
+
+  <% if transaction.what_you_need_to_know.present? %>
+    <div id="what-you-need-to-know">
+      <h2><%= t 'transaction.what_you_need_to_know' %></h2>
+      <%= transaction.what_you_need_to_know.try(:html_safe) %>
+    </div>
+  <% end %>
+
+  <% if transaction.other_ways_to_apply.present? %>
+    <div id="other-ways-to-apply">
+      <h2><%= t 'transaction.other_ways_to_apply' %></h2>
+      <%= transaction.other_ways_to_apply.try(:html_safe) %>
+    </div>
+  <% end %>
+
+<% end %>
+<%= render 'govuk_component/govspeak',
+  content: additional_information_single_govspeak,
+  direction: page_text_direction,
+  disable_youtube_expansions: true,
+  rich_govspeak: true %>
