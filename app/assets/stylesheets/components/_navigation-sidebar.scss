@@ -2,10 +2,16 @@
   h2 {
     @include bold-19;
     margin-bottom: $gutter-one-third;
+    padding-top: $gutter-one-third;
+    border-top: 2px solid $govuk-blue
   }
 
   .navigation-group {
-    border-top: 2px solid $govuk-blue
+    border-top: 1px solid $border-colour;
+  }
+
+  h2 + .navigation-group {
+    border-top: 0;
   }
 
   .navigation-links {
@@ -39,6 +45,10 @@
     li {
       margin-bottom: $gutter-one-third;
     }
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .collection-list {
@@ -48,6 +58,10 @@
 
     li {
       margin-bottom: $gutter-one-third;
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 }
