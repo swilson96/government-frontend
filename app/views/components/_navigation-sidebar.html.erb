@@ -6,9 +6,9 @@
   ordered_related_items ||=[]
 %>
 <div class="app-c-navigation-sidebar">
+  <% if ordered_related_items.present? %>
   <h2>Related content</h2>
 
-  <% if ordered_related_items.present? %>
   <div class="navigation-group">
     <ul class="related-list">
       <% ordered_related_items.each do |item| %>
@@ -19,76 +19,44 @@
   <% end %>
 
   <% if curated_items.present? %>
+  <h3>Explore the topic</h3>
+
   <div class="navigation-group">
     <ul class="navigation-links">
       <% curated_items.each do |item| %>
-      <li>
-        <a href="<%= item[:path] %>">
-          <span class="contextual-title">
-            <% if item[:type] == "mainstream" %>
-              How to guide
-            <% elsif item[:type] == "whitehall" %>
-              Detailed guidance
-            <% end %>
-          </span>
-          <%= item[:text] %>
-        </a>
-      </li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
-
-  <% if non_curated_items.present? %>
-  <div class="navigation-group">
-    <ul class="navigation-links">
-      <% non_curated_items.each do |item| %>
-      <li>
-        <a href="<%= item[:path] %>">
-          <span class="contextual-title">
-            <% if item[:type] == "policy" %>
-              Guidance about
-            <% end %>
-          </span>
-          <%= item[:text] %>
-        </a>
-      </li>
+      <li><a href="<%= item[:path] %>"><%= item[:text] %></a></li>
       <% end %>
     </ul>
   </div>
   <% end %>
 
   <% if organisational_entities.present? %>
+  <h3>Detailed guidance from</h3>
   <div class="navigation-group">
     <ul class="navigation-links">
       <% organisational_entities.each do |item| %>
-      <li>
-        <a href="<%= item[:path] %>">
-          <span class="contextual-title">
-            <% if item[:type] == "organisation" %>
-              Guidance from
-            <% elsif item[:type] == "role" %>
-              Guidance from
-            <% elsif item[:type] == "person" %>
-              Guidance from
-            <% elsif item[:type] == "worldwide_location" %>
-              Guidance from
-            <% end %>
-          </span>
-          <%= item[:text] %>
-        </a>
-      </li>
+      <li><a href="<%= item[:path] %>"><%= item[:text] %></a></li>
       <% end %>
     </ul>
   </div>
   <% end %>
 
   <% if collections.present? %>
-  <h2>In collections</h2>
-
+  <h3>Collections</h3>
   <div class="navigation-group">
-    <ul class="collection-list">
+    <ul class="navigation-links">
       <% collections.each do |item| %>
+      <li><a href="<%= item[:path] %>"><%= item[:text] %></a></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <% if non_curated_items.present? %>
+  <h3>Policy</h3>
+  <div class="navigation-group">
+    <ul class="navigation-links">
+      <% non_curated_items.each do |item| %>
       <li><a href="<%= item[:path] %>"><%= item[:text] %></a></li>
       <% end %>
     </ul>
