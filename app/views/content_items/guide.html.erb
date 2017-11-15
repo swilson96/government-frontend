@@ -3,19 +3,17 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', { title: @content_item.title } %>
+
+    <% if @content_item.multi_page_guide? %>
+      <aside class="part-navigation-container" role="complementary">
+        <%= render 'shared/parts_navigation', content_item: @content_item, navigation_label: 'Pages in this guide' %>
+      </aside>
+    <% end %>
   </div>
 </div>
 
-<div class="">
-  <% if @content_item.multi_page_guide? %>
-    <aside class="part-navigation-container" role="complementary">
-      <%= render 'shared/parts_navigation', content_item: @content_item, navigation_label: 'Pages in this guide' %>
-    </aside>
-  <% end %>
-</div>
-
 <div class="grid-row">
-  <div class="column-two-thirds">
+  <div class="column-two-thirds body-copy">
     <% if @content_item.has_parts? %>
       <% if @content_item.multi_page_guide? %>
         <h1 class="part-title">

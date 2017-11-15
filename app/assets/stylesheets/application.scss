@@ -45,3 +45,7 @@
 @import 'views/answer';
 @import 'views/help-page';
 @import "views/guide";
+
+.body-copy {
+  margin-top: $gutter;
+}

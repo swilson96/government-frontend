@@ -1,10 +1,10 @@
 @mixin parts {
   .part-navigation-container {
     margin-top: $gutter;
-    margin-bottom: $gutter;
+    // margin-bottom: $gutter;
 
     @include media(tablet) {
-      margin-bottom: $gutter * 1.5;
+      // margin-bottom: $gutter * 1.5;
     }
 
     border-bottom: 1px solid $grey-2;
