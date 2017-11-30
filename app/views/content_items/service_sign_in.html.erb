@@ -1,9 +1,14 @@
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/title',
-        context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
-        title: @content_item.title %>
-  </div>
-</div>
+<% content_for :no_breadcrumbs, true %>
 
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+<%= form_tag("/", method: "get") do %>
+  <fieldset>
+    <legend>
+      <%= render 'govuk_component/title', title: @content_item.title %>
+    </legend>
+    <%= render 'govuk_component/govspeak', content: '<p>[Description]</p>' %>
+
+    <p>[Radio components go here]</p>
+
+    <%= render 'govuk_component/button', text: 'Continue' %>
+  </fieldset>
+<% end %>
