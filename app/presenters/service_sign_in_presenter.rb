@@ -1,0 +1,2 @@
+class ServiceSignInPresenter < ContentItemPresenter
+end
