@@ -9,6 +9,7 @@ class ServiceSignInTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('service_sign_in')
 
     assert page.has_css?("title", text: "Prove your identity to continue - GOV.UK")
+    assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]')
     refute page.has_css?(shared_component_selector('breadcrumbs'))
     refute page.has_css?(shared_component_selector('government_navigation'))
 

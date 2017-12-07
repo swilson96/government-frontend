@@ -1,5 +1,9 @@
 <% content_for :no_breadcrumbs, true %>
 <% content_for :simple_header, true %>
+<% content_for :extra_head_content do %>
+  <% # prevent search engines from indexing this page %>
+  <meta name="robots" content="noindex, nofollow">
+<% end %>
 
 <%= form_tag("", method: "post") do %>
   <% legend_text = render 'govuk_component/title', title: @content_item.title %>
