@@ -6,7 +6,11 @@ class ServiceSignInTest < ActionDispatch::IntegrationTest
   end
 
   test "page renders correctly" do
-    setup_and_visit_content_item('service_sign_in')
+    content_item = get_content_example("service_sign_in")
+    path = content_item["base_path"] + "/choose-sign-in"
+    content_store_has_item(path, content_item.to_json)
+    visit(path)
+    # setup_and_visit_content_item('service_sign_in', '/choose-sign-in')
 
     assert page.has_css?("title", text: 'Prove your identity to continue - GOV.UK', visible: false)
     assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
