@@ -39,8 +39,7 @@ class ServiceSignInTest < ActionDispatch::IntegrationTest
           assert page.has_css?(".app-c-radio__label__text", text: "Create an account")
         end
       end
+      assert page.has_css?(shared_component_selector('button'), text: "Continue")
     end
-
-    assert page.has_css?("button.app-c-button", text: "Continue")
   end
 end
