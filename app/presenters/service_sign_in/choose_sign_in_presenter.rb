@@ -19,6 +19,10 @@ module ServiceSignIn
       end
     end
 
+    def back_link
+      content_item['links']['parent'].first['base_path']
+    end
+
   private
 
     def choose_sign_in
