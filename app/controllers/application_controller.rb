@@ -27,4 +27,22 @@ private
 
     '/' + URI.encode(path_and_optional_locale)
   end
+
+  def set_content_item(presenter = ContentItemPresenter)
+    @publication = presenter.new(content_item)
+    set_language_from_publication
+  end
+
+  def content_item
+    @_content_item ||= Services.content_store.content_item("/#{params[:slug]}")
+  end
+
+  def set_language_from_publication
+    I18n.locale = if @publication.locale && I18n.available_locales.map(&:to_s).include?(@publication.locale)
+                    @publication.locale
+                  else
+                    I18n.default_locale
+                  end
+  end
+
 end

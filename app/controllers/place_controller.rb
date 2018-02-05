@@ -1,7 +1,7 @@
 class PlaceController < ApplicationController
-  include Previewable
-  include Cacheable
-  include Navigable
+  #include Previewable
+  #include Cacheable
+  #include Navigable
 
   helper_method :postcode_provided?, :postcode
 

@@ -1,0 +1,46 @@
+<%= render layout: 'shared/base_page', locals: {
+  title: @publication.title,
+  publication: @publication,
+  edition: @edition,
+} do %>
+  <section class="intro">
+    <div class="get-started-intro">
+
+      <div class="find-nearest">
+
+        <%= raw @publication.introduction %>
+
+        <%= render partial: 'location_form',
+                   locals: {
+                     format: 'service',
+                     publication_format: 'place',
+                     postcode: postcode,
+                   } %>
+      </div>
+    </div>
+  </section>
+
+  <% if postcode_provided? && !@location_error %>
+    <section class="places-results"
+             data-module="auto-track-event"
+             data-track-category="<%= track_category_for_place_results(@publication.places) %>"
+             data-track-action="<%= track_action_for_place_results(@publication.places) %>"
+             data-track-label="<%= track_label_for_place_results(@publication.places) %>">
+      <% if @publication.places.any? %>
+
+          <h2>Results <%= preposition ||= "near" %> <strong><%= postcode %></strong>:</h2>
+          <ol id="options" class="places">
+            <%= render partial: option_partial ||= "option", locals: { places: @publication.places } %>
+          </ol>
+      <% end %>
+    </section>
+  <% else %>
+    <section class="more">
+      <div class="further-information">
+        <h2>Further information</h2>
+        <%= raw @publication.need_to_know %>
+        <%= raw @publication.more_information %>
+      </div>
+    </section>
+  <% end %>
+<% end %>

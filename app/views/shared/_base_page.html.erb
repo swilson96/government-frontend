@@ -1,0 +1,33 @@
+<main id="content" role="main" class="<%= main_class if local_assigns.include?(:main_class) %>">
+  <header class="page-header">
+    <div>
+      <h1>
+        <% if local_assigns.include?(:context) %><span><%= context %></span><% end %>
+        <%= title %>
+      </h1>
+    </div>
+  </header>
+  <div class="article-container group">
+    <!-- #render :partial => 'beta_label' if publication.in_beta && !current_tasklist_ab_test.show_tasklist_header? -->
+    <div class="content-block">
+      <div class="inner">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render 'shared/publication_metadata', :publication => publication %>
+  </div>
+</main>
+
+<% if current_tasklist_ab_test.show_tasklist_sidebar? %>
+<div class="related-container">
+  <%= render 'shared/tasklist_sidebar', tasklist_content: tasklist_content %>
+</div>
+<% elsif @navigation_helpers %>
+<div class="related-container">
+  <% if should_present_taxonomy_navigation?(@content_item) %>
+    <%= render partial: 'govuk_component/taxonomy_sidebar', locals: navigation_helpers.taxonomy_sidebar %>
+  <% else %>
+    <%= render partial: 'govuk_component/related_items', locals: navigation_helpers.related_items %>
+  <% end %>
+</div>
+<% end %>
