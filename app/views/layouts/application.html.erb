@@ -1,49 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>
-    <%if content_for?(:title) %>
-      <%= yield :title %> - GOV.UK
-    <% else %>
-      <%= @content_item.page_title %> - GOV.UK
-    <% end %>
-  </title>
-  <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application", integrity: true, crossorigin: 'anonymous' %><!--<![endif]-->
-  <!--[if IE 6]><%= stylesheet_link_tag "application-ie6" %><script>var ieVersion = 6;</script><![endif]-->
-  <!--[if IE 7]><%= stylesheet_link_tag "application-ie7" %><script>var ieVersion = 7;</script><![endif]-->
-  <!--[if IE 8]><%= stylesheet_link_tag "application-ie8" %><script>var ieVersion = 8;</script><![endif]-->
-  <% if Rails.env.test? && params[:medium] == 'print' %>
-    <%= stylesheet_link_tag "print.css", :media => "screen", integrity: true, crossorigin: 'anonymous' %>
-  <% else %>
-    <%= stylesheet_link_tag "print.css", :media => "print", integrity: true, crossorigin: 'anonymous' %>
-  <% end %>
-  <%= javascript_include_tag "application", integrity: true, crossorigin: 'anonymous' %>
-  <%= csrf_meta_tags %>
-  <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item.content_item } %>
-  <% if @content_item.description %>
-    <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
-  <% end %>
-  <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
-
-  <%= yield :extra_head_content %>
-</head>
-<body>
-  <% unless content_for(:simple_header) %>
-    <%= render partial: 'govuk_component/government_navigation', locals: { active: active_proposition } %>
-  <% end %>
-
-  <div id="wrapper" class="<%= wrapper_class %>">
-    <%= render_phase_label @content_item, content_for(:phase_message) %>
-    <% if show_step_nav?%>
-      <%= render 'shared/step_nav_header', step_nav_content: current_step_nav %>
-    <% else %>
-      <% if !content_for(:no_breadcrumbs) %>
-        <%= render 'shared/breadcrumbs' %>
-      <% end %>
-    <% end %>
-    <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
-      <%= yield %>
-    </main>
-  </div>
-</body>
-</html>
+<%= render 'components/layout',
+  page_title: @content_item.page_title,
+  description: @content_item.description,
+  page_class: @content_item.schema_name.dasherize do %>
+  <%= yield %>
+<% end %>

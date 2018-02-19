@@ -139,6 +139,8 @@ GEM
       slimmer (>= 11.1.0)
     govuk_schemas (3.1.0)
       json-schema (~> 2.8.0)
+    govuk_template (0.22.2)
+      rails (>= 3.1)
     hashdiff (0.3.7)
     highline (1.7.10)
     htmlentities (4.3.4)
@@ -366,6 +368,7 @@ DEPENDENCIES
   govuk_navigation_helpers (~> 9.0)
   govuk_publishing_components (~> 5.0)
   govuk_schemas (~> 3.1)
+  govuk_template (= 0.22.2)
   htmlentities (~> 4.3)
   jasmine-rails
   mocha

@@ -20,6 +20,7 @@ gem 'govuk_app_config', '~> 1.2'
 gem 'govuk_frontend_toolkit', '~> 7.2'
 gem 'govuk_navigation_helpers', '~> 9.0'
 gem 'govuk_publishing_components', '~> 5.0'
+gem 'govuk_template', '0.22.2'
 gem 'plek', '~> 2.1'
 gem 'slimmer', '~> 11.1'
 
