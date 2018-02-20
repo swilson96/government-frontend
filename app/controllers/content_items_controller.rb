@@ -1,5 +1,6 @@
 class ContentItemsController < ApplicationController
   include GuideNavAbTestable
+  include ContentPageLinkNavigationAbTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
