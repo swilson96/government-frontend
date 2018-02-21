@@ -1,0 +1,48 @@
+<div class="grid-row">
+  <div class="column-two-thirds responsive-top-margin">
+    <%= render 'govuk_component/title', @content_item.title_and_context %>
+  </div>
+  <div class="column-two-thirds responsive-bottom-margin">
+    <section class="intro">
+      <div class="get-started-intro"><%= @content_item.introductory_paragraph.try(:html_safe) %></div>
+      <% if @content_item.downtime_message.present? %>
+        <div class="application-notice help-notice">
+          <p><strong><%= @content_item.downtime_message %></strong></p>
+        </div>
+      <% end %>
+      <p id="get-started" class="get-started group">
+			  <%
+					button_attrs = {
+						text: @content_item.start_button_text,
+						href: @content_item.transaction_start_link,
+						rel: "external",
+						role: "button"
+					}
+
+					if @content_item.department_analytics_profile.present?
+            button_attrs[:data] = {
+							"module": "cross-domain-tracking",
+            	"tracking-code": @content_item.department_analytics_profile,
+            	"tracking-name":"transactionTracker"
+						}
+        	end
+				%>
+				<%= render "govuk_component/button", button_attrs %>
+        <% if @content_item.will_continue_on.present? %>
+          <span class="destination"> <%= t 'formats.transaction.on' %> <%= @content_item.will_continue_on %></span>
+        <% end %>
+      </p>
+    </section>
+
+    <section class="more">
+      <%- if @content_item.multiple_more_information_sections? -%>
+        <%= render partial: 'content_items/transaction/additional_information_tabbed',
+          locals: { transaction: @content_item } %>
+      <%- else -%>
+        <%= render partial: 'content_items/transaction/additional_information_single',
+          locals: { transaction: @content_item } %>
+      <%- end -%>
+    </section>
+  </div>
+
+</div>
