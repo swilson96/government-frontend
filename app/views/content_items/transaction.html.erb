@@ -2,7 +2,7 @@
   <div class="column-two-thirds responsive-top-margin">
     <%= render 'govuk_component/title', @content_item.title_and_context %>
   </div>
-  <div class="column-two-thirds responsive-bottom-margin">
+  <div class="column-two-thirds responsive-bottom-margin content-block">
     <section class="intro">
       <div class="get-started-intro"><%= @content_item.introductory_paragraph.try(:html_safe) %></div>
       <% if @content_item.downtime_message.present? %>
@@ -44,5 +44,4 @@
       <%- end -%>
     </section>
   </div>
-
 </div>
